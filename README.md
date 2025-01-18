@@ -2,4 +2,4 @@
 BeeHive project frontend
 
 **Link to Project Backend**
-[**beehive__express**](https://github.com/JennyGlover/behive__express)
+[**beehive__express**](https://github.com/JennyGlover/beehive__express)
