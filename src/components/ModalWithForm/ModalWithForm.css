@@ -1,0 +1,22 @@
+.ModalWithForm__form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    justify-content: center;
+    text-align: left;
+}
+
+.ModalWithForm__input {
+    margin-bottom: 20px;
+    border-radius: 18px;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.192);
+}
+
+.ModalWithForm__submit-button {
+    border-radius: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.192);
+    padding: 8px;
+    width: 200px;
+}
