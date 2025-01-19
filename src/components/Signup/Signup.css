@@ -1,0 +1,20 @@
+.Signup {
+    height: 100vh;
+    background-color: rgb(252, 250, 247);
+    margin: 0 auto;
+}
+
+.Signup__headings {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.Signup__heading {
+    padding-top: 100px;
+    color: rgb(223, 156, 10);
+}
+
+.Signup__sub-heading {
+    font-weight: 400;
+    font-size: 24px;
+}

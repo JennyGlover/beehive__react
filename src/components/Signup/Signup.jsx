@@ -4,9 +4,14 @@ import './Signup.css'
 function Signup(){
   
   return(
+    <div className='Signup'>
+    <div className='Signup__headings'> 
+    <h1 className='Signup__heading'>Welcome to BeeHive 🐝 </h1>
+    <p className='Signup__sub-heading'>Where every bee finds their hive. Chat, video, and endless buzz!🐝🍯💬</p>
+    </div>
     <ModalWithForm
       title="Sign up"
-      buttonText ="Sign up"
+      buttonText="Next"
     >
         <label htmlFor="signup-name"  className="Signup__name">Name </label>
         <input 
@@ -38,6 +43,7 @@ function Signup(){
         required
         />
     </ModalWithForm>
+    </div>
   )
 }
 

@@ -2,21 +2,32 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 400px;
     justify-content: center;
     text-align: left;
+    font-size: 18px;
+}
+
+.ModalWithForm__form-title {
+    font-size: 25px;
+    font-weight: 700;
 }
 
 .ModalWithForm__input {
+    margin-top: 5px;
     margin-bottom: 20px;
     border-radius: 18px;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.192);
 }
 
 .ModalWithForm__submit-button {
     border-radius: 18px;
-    border: 1px solid rgba(0, 0, 0, 0.192);
-    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 10px;
     width: 200px;
+    background-color: rgb(223, 156, 10);
+    color: white;
+    margin-top: 20px;
+    align-self: center;
 }
