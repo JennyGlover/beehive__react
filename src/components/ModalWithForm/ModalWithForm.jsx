@@ -8,7 +8,7 @@ function ModalWithForm({
     name,
 }){
     return(
-
+        <>
         <form
         className={`ModalWithForm__form`}
         >
@@ -16,6 +16,7 @@ function ModalWithForm({
         {children}
         <button className="ModalWithForm__submit-button" >{buttonText}</button>
         </form>
+        </>
     )
 }
 

@@ -1,5 +1,8 @@
 import { useState } from 'react';
+import {Routes, Route, Navigate} from 'react-router-dom';
+import Main from '../Main/Main';
 import Signup from '../Signup/Signup';
+import Login from '../Login/Login';
 import './App.css';
 
 function App() {
@@ -7,7 +10,26 @@ function App() {
 
   return (
     <>
+    <Routes>
+      <Route
+        path="/home"
+        element={
+          <Main/>
+        }
+      />
+      <Route
+      path="/signup"
+      element={
       <Signup />
+      }
+      />
+      <Route
+      path="/"
+      element={
+        <Login />
+      }
+      />
+      </Routes>
     </>
   )
 }

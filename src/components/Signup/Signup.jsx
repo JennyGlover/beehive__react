@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ModalWithForm from '../ModalWithForm/ModalWithForm';
 import './Signup.css';
 import logo from '../../assets/beehive-logo.png';
@@ -54,8 +55,10 @@ function Signup(){
         required
         />
     </ModalWithForm>
+    <p className="Signup__login-text">Already part of the hive? Fly on in! <Link to='/' className='Signup__login-link'> Login</Link></p>
     </div>
     </div>
+    
   )
 }
 

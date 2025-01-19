@@ -1,0 +1,18 @@
+.Navigation {
+    margin-left: 20px;
+}
+
+.Navigation__logo-container {
+    display: flex;
+}
+
+.Navigation__logo {
+    width: 60px;
+}
+
+.Navigation__logo-text {
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(211, 151, 27);
+}
