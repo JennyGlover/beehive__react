@@ -1,17 +1,28 @@
 import ModalWithForm from '../ModalWithForm/ModalWithForm';
-import './Signup.css'
+import './Signup.css';
+import logo from '../../assets/beehive-logo.png';
+import friends from '../../assets/pexels-photo-9578714.jpeg'
 
 function Signup(){
   
   return(
     <div className='Signup'>
-    <div className='Signup__headings'> 
-    <h1 className='Signup__heading'>Welcome to BeeHive 🐝 </h1>
+   
+    <div  className="Signup__image-container">
+    <img className="Signup__image" src={friends} alt="Image of friends"/>
+    </div>
+    <div>
+          <a> 
+        <img className="Signup__logo" src={logo} alt="BeeHive logo"/>
+    </a>
+        <div className='Signup__headings'> 
+    <h1 className='Signup__heading'>Welcome to BeeHive</h1>
     <p className='Signup__sub-heading'>Where every bee finds their hive. Chat, video, and endless buzz!🐝🍯💬</p>
+   
     </div>
     <ModalWithForm
       title="Sign up"
-      buttonText="Next"
+      buttonText="Next 🌻"
     >
         <label htmlFor="signup-name"  className="Signup__name">Name </label>
         <input 
@@ -43,6 +54,7 @@ function Signup(){
         required
         />
     </ModalWithForm>
+    </div>
     </div>
   )
 }
