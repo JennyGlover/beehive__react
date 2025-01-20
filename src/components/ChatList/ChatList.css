@@ -1,14 +1,14 @@
 .ChatList {
   padding-top: 20px;
-  width: 250px;
+  width: 270px;
   height: 100%;
   border-right: 2px solid rgb(234, 237, 236);
 }
 
 .ChatList__search {
   border-radius: 100px;
-  padding: 8px 30px 8px 12px;
-  border: 1.9px solid rgb(209, 209, 209);
+  padding: 8px 50px 8px 12px;
+  border: 1.95px solid rgb(209, 209, 209);
   background-color: rgba(241, 241, 241, 0.192);
   font-size: 16px;
   font-weight: 500;
@@ -16,8 +16,9 @@
 }
 
 .ChatList__search:focus {
-  border: 2px solid rgb(236, 166, 14);
+  border: 1.95px solid rgb(236, 166, 14);
   outline: none;
+  padding: 8px 50px 8px 12px;
 }
 
 .ChatList__search-container {
@@ -40,8 +41,10 @@
   height: 18px;
   width: 18px;
   margin-right: 5px;
+  cursor: text;
 }
 
 .ChatList__line_bold {
-  border: 2px solid rgba(236, 166, 14, 0.479);
+  border: 1.6px solid rgba(236, 166, 14, 0.479);
+  margin-bottom: 0;
 }

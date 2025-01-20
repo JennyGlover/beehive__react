@@ -12,10 +12,13 @@ function Navigation() {
       <p className="Navigation__menu-text">Menu </p>
       <div className="Navigation__page-Links">
         <p className="Navigation__page-link">
-          👯‍♀️ Pals <span className="Navigation__link-counter">0</span>
+          👯‍♀️ Friends{" "}
+          <span className="Navigation__link-counter Navigation__friend-counter">
+            0
+          </span>
         </p>
         <p className="Navigation__page-link Navigation__buzz-link">
-          💬 Buzz <span className="Navigation__link-counter">0</span>
+          💬 Messages <span className="Navigation__link-counter">0</span>
         </p>
       </div>
       <hr className="Navigation__line"></hr>
