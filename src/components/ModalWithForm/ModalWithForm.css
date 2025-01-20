@@ -1,41 +1,44 @@
 .ModalWithForm__form {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    justify-content: center;
-    text-align: left;
-    font-size: 16px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  justify-content: center;
+  text-align: left;
+  font-size: 16px;
 }
 
 .ModalWithForm__form-title {
-    font-size: 25px;
-    font-weight: 700;
+  font-size: 25px;
+  font-weight: 700;
 }
 
 .ModalWithForm__input {
-    margin-top: 5px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    padding: 10px;
-    border: 1px solid rgba(146, 126, 61, 0.192);
-    cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid rgba(146, 126, 61, 0.192);
+  cursor: pointer;
 }
 
 .ModalWithForm__input:focus {
-    border: 1.2px solid rgb(236, 166, 14);
-    outline: none;
+  border: 1.2px solid rgb(236, 166, 14);
+  outline: none;
 }
 
 .ModalWithForm__submit-button {
-    border-radius: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.055);
-    padding: 10px;
-    width: 200px;
-    background-color: rgb(229, 163, 32);
-    color: white;
-    margin-top: 20px;
-    align-self: center;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.096);
-    cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32"%3E%3Ctext x="-5" y="28" font-size="32" %3E🐝%3C/text%3E%3C/svg%3E') 16 28, auto;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.055);
+  padding: 10px;
+  width: 200px;
+  background-color: rgb(229, 163, 32);
+  color: white;
+  margin-top: 20px;
+  align-self: center;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.096);
+  cursor:
+    url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32"%3E%3Ctext x="-5" y="28" font-size="32" %3E🐝%3C/text%3E%3C/svg%3E')
+      16 28,
+    auto;
 }

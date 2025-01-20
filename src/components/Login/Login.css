@@ -1,54 +1,57 @@
 .Login {
-    height: 100vh;
-    background-color: rgb(253, 253, 252);
-    position: relative;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    color: rgb(56, 56, 56);
-    cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32"%3E%3Ctext x="-5" y="28" font-size="32" %3E🐝%3C/text%3E%3C/svg%3E') 16 28, auto;
+  height: 100vh;
+  background-color: rgb(253, 253, 252);
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: rgb(56, 56, 56);
+  cursor:
+    url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32"%3E%3Ctext x="-5" y="28" font-size="32" %3E🐝%3C/text%3E%3C/svg%3E')
+      16 28,
+    auto;
 }
 
 .Login__logo {
-    width: 120px;
-    margin-left: 30%;
+  width: 120px;
+  margin-left: 30%;
 }
 
 .Login__image-container {
-    height: 100vh;
-    width: 50vw;
-    overflow: hidden;
-    margin-right: 40px;
+  height: 100vh;
+  width: 50vw;
+  overflow: hidden;
+  margin-right: 40px;
 }
 
 .Login__image {
-    width: 800px;
-    border-radius: 05px;
-    height: max-content;
-    margin-right: 60px;
+  width: 800px;
+  border-radius: 05px;
+  height: max-content;
+  margin-right: 60px;
 }
 
 .Login__headings {
-    width: 400px;
-    margin: 0 auto;
+  width: 400px;
+  margin: 0 auto;
 }
 
 .Login__heading {
-    color: rgb(223, 156, 10);
+  color: rgb(223, 156, 10);
 }
 
 .Login__sub-heading {
-    font-weight: 400;
-    font-size: 18px;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .Login__login-text {
-    text-align: center;
-    margin-top: 30px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .Login__login-link {
-    color: rgb(71, 157, 255);
-    font-weight: 600;
-    cursor: pointer;
+  color: rgb(71, 157, 255);
+  font-weight: 600;
+  cursor: pointer;
 }

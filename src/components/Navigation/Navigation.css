@@ -1,125 +1,126 @@
 .Navigation {
-    padding: 35px 0px 0 0px;
-    position: relative;
-    background-color: rgb(252, 251, 252);
-    height: 100%;
-    width: 230px;
-    border-right: 2px solid rgb(234, 237, 236);
+  padding: 35px 0px 0 0px;
+  position: relative;
+  background-color: rgb(252, 251, 252);
+  height: 100%;
+  width: 230px;
+  border-right: 2px solid rgb(234, 237, 236);
 }
 
 .Navigation__logo-container {
-    display: flex;
-    position: relative;
-    right: 14px;
-    padding-left: 30px;
+  display: flex;
+  position: relative;
+  right: 14px;
+  padding-left: 30px;
 }
 
 .Navigation__logo {
-    width: 60px;
-    height: 100%;
-    cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32"%3E%3Ctext x="-5" y="28" font-size="32" %3E🍯%3C/text%3E%3C/svg%3E') 16 28, auto;
+  width: 60px;
+  height: 100%;
+  cursor:
+    url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32"%3E%3Ctext x="-5" y="28" font-size="32" %3E🍯%3C/text%3E%3C/svg%3E')
+      16 28,
+    auto;
 }
 
 .Navigation__logo-message {
-    opacity: 0;
-    position: absolute;
-    top: -30px;
-    left: -6px;
-    color: rgba(0, 0, 0, 0.671);
-    font-size: 12px
+  opacity: 0;
+  position: absolute;
+  top: -30px;
+  left: -6px;
+  color: rgba(0, 0, 0, 0.671);
+  font-size: 12px;
 }
 
 .Navigation__logo:hover {
-    animation: buzz 0.3s linear infinite;
+  animation: buzz 0.3s linear infinite;
 }
 
 @keyframes buzz {
-    0% {
-        transform: rotate(0deg) translate(0, 0);
-    }
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+  }
 
-    25% {
-        transform: rotate(0deg) translate(1px, 0px);
-    }
+  25% {
+    transform: rotate(0deg) translate(1px, 0px);
+  }
 
-    50% {
-        transform: rotate(0deg) translate(-1px, 0px);
-    }
+  50% {
+    transform: rotate(0deg) translate(-1px, 0px);
+  }
 
-    75% {
-        transform: rotate(0deg) translate(1px, 0px);
-    }
+  75% {
+    transform: rotate(0deg) translate(1px, 0px);
+  }
 
-    100% {
-        transform: rotate(0deg) translate(0, 0);
-    }
+  100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
 }
 
 .Navigation__logo-text {
-    margin-left: 5px;
-    font-size: 25px;
-    font-weight: 700;
-    color: rgb(211, 151, 27);
-    position: relative;
-    bottom: 10px;
-    height: 20px;
+  margin-left: 5px;
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(211, 151, 27);
+  position: relative;
+  bottom: 10px;
+  height: 20px;
 }
 
 .Navigation__menu-text {
-    color: rgb(176, 176, 176);
-    font-weight: 600;
-    font-size: 15px;
-    margin-bottom: 55px;
-    padding-left: 30px;
+  color: rgb(176, 176, 176);
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 55px;
+  padding-left: 30px;
 }
 
 .Navigation__page-link {
-    font-size: 18px;
-    font-weight: 600;
-    color: rgb(56, 56, 56);
-    cursor: pointer;
-    padding: 10px;
-    margin: 0;
-    width: 190px;
-    text-align: left;
-    padding-left: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(56, 56, 56);
+  cursor: pointer;
+  padding: 10px;
+  margin: 0;
+  width: 190px;
+  text-align: left;
+  padding-left: 30px;
 }
 
 .Navigation__page-link:hover {
-    font-size: 18px;
-    font-weight: 600;
-    color: rgb(217, 153, 27);
-    background-color: rgba(217, 154, 27, 0.158);
-    padding: 10px;
-    margin: 0;
-    padding-left: 30px;
-
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(217, 153, 27);
+  background-color: rgba(217, 154, 27, 0.158);
+  padding: 10px;
+  margin: 0;
+  padding-left: 30px;
 }
 
 .Navigation__buzz-link,
 .Navigation__buzz-link:hover {
-    margin-bottom: 55px;
+  margin-bottom: 55px;
 }
 
 .Navigation__profile-Modal-link,
 .Navigation__profile-Modal-link:hover {
-    margin: 0;
-    margin-top: 60px;
+  margin: 0;
+  margin-top: 60px;
 }
 
 .Navigation__link-counter {
-    background-color: rgb(217, 153, 27);
-    margin-left: 20px;
-    padding: 1px 8px;
-    border-radius: 20px;
-    color: white;
-    font-size: 13px;
+  background-color: rgb(217, 153, 27);
+  margin-left: 20px;
+  padding: 1px 8px;
+  border-radius: 20px;
+  color: white;
+  font-size: 13px;
 }
 
 .Navigation__line {
-    border: none;
-    border-top: 2px solid rgb(234, 237, 236);
-    margin: 30px 0 0 30px;
-    width: 170px;
-
+  border: none;
+  border-top: 2px solid rgb(234, 237, 236);
+  margin: 30px 0 0 30px;
+  width: 170px;
 }

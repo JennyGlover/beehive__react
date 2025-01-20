@@ -1,18 +1,28 @@
-import logo from '../../assets/beehive-logo.png';
-import './Header.css';
+import logo from "../../assets/beehive-logo.png";
+import "./Header.css";
 
-
-function Header (){
-
-    return(
-    <div className='Header'>
-    <div className='Header__logo-container'>
-    <img className="Header__logo" src={logo} alt="BeeHive logo"/>
-    <p className="Header__logo-text">BeeHive</p>
+function Header() {
+  return (
+    <div className="Header">
+      <div className="Header__container">
+        <p className="Header__page-title">Messages</p>
+        <div className="Header__menu-container">
+          <p className="Header__icon">
+            💬<div className="Header__notification-dot"></div>
+          </p>
+          <p className="Header__icon">
+            🔔<div className="Header__notification-dot"></div>
+          </p>
+          <div className="Header__profile-container">
+            <div className="Header__profile-icon"></div>
+            <p className="Header__profile-name">Glena Hanz </p>
+          </div>
+        </div>
+      </div>
+      <hr className="Header__line" />
+      <p className="Header__friends-"></p>
     </div>
-    <p className='Header__friends-'></p>
-    </div>
-    );
+  );
 }
 
 export default Header;

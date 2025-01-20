@@ -1,6 +1,6 @@
-@import url('../src/vendor/fonts.css');
-@import url('../src/vendor/normalize.css');
+@import url("../src/vendor/fonts.css");
+@import url("../src/vendor/normalize.css");
 
 :root {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
