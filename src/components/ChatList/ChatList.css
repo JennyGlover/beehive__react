@@ -1,0 +1,47 @@
+.ChatList {
+  padding-top: 20px;
+  width: 250px;
+  height: 100%;
+  border-right: 2px solid rgb(234, 237, 236);
+}
+
+.ChatList__search {
+  border-radius: 100px;
+  padding: 8px 30px 8px 12px;
+  border: 1.9px solid rgb(209, 209, 209);
+  background-color: rgba(241, 241, 241, 0.192);
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+.ChatList__search:focus {
+  border: 2px solid rgb(236, 166, 14);
+  outline: none;
+}
+
+.ChatList__search-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.ChatList__title {
+  margin-left: 15px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.ChatList__search-icon {
+  position: absolute;
+  top: 1px;
+  right: 12px;
+  background-image: url("/src/assets/magnifying-glass-solid\ \(2\).svg");
+  background-size: cover;
+  height: 18px;
+  width: 18px;
+  margin-right: 5px;
+}
+
+.ChatList__line_bold {
+  border: 2px solid rgba(236, 166, 14, 0.479);
+}
