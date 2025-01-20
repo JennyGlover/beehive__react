@@ -9,13 +9,16 @@ function Navigation (){
     <div className='Navigation__logo-container'>
     <img className="Navigation__logo" src={logo} alt="BeeHive logo"/>
     <p className="Navigation__logo-text">BeeHive</p>
+    <p className="Navigation__logo-message">That's my honey!</p>
     </div>
+    <hr className="Navigation__line"></hr> 
     <p className='Navigation__menu-text'>Menu</p>
     <div className='Navigation__page-Links'>
-    <p className='Navigation__friends-link'>👯‍♀️ Pals</p>
-    <p className='Navigation__Messages-link'>💬 Buzz</p>
+    <p className='Navigation__page-link'>👯‍♀️ Pals</p>
+    <p className='Navigation__page-link'>💬 Buzz</p>
     </div>
-    <p className='Navigation__profile-Modal-link'>🐝 Profile</p>
+    <hr className="Navigation__line"></hr> 
+    <p className='Navigation__page-link Navigation__profile-Modal-link '>🐝 Profile</p>
 
     </div>
     );
