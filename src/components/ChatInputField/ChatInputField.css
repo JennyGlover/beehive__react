@@ -22,6 +22,11 @@
   margin-top: 10px;
 }
 
+.ChatInputField__textarea_style-music {
+  height: 30px;
+  border-radius: 0px 0px 5px 5px;
+}
+
 .ChatInputField__textarea:focus {
   outline: 1px solid rgb(217, 153, 27);
 }

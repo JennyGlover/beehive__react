@@ -25,15 +25,6 @@ function MusicSearch() {
           <MusicSearchCard />
           <MusicSearchCard />
           <MusicSearchCard />
-          <MusicSearchCard />
-          <MusicSearchCard />
-          <MusicSearchCard />
-          <MusicSearchCard />
-          <MusicSearchCard />
-          <MusicSearchCard />
-          <MusicSearchCard />
-          <MusicSearchCard />
-          <MusicSearchCard />
         </div>
       </div>
     </div>
