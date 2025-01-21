@@ -1,5 +1,6 @@
 .Navigation {
   padding: 35px 0px 0 0px;
+  box-sizing: border-box;
   position: relative;
   background-color: rgb(252, 251, 252);
   height: 100%;
