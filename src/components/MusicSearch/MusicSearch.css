@@ -8,6 +8,11 @@
   border: 1.5px solid rgb(237, 237, 237);
   overflow: hidden;
   position: relative;
+  display: block;
+}
+
+.MusicSearch__type_disabled {
+  display: none;
 }
 
 .MusicSearch__close-btn {

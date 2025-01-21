@@ -1,11 +1,15 @@
+import { useContext } from "react";
 import MusicSearch from "../MusicSearch/MusicSearch";
 import MusicSelection from "../MusicSelection/MusicSelection";
+import { MusicSearchContext } from "../../contexts/AppContexts";
 import "./ChatInputField.css";
 
 function ChatInputField() {
+  const { handleSearchOpen } = useContext(MusicSearchContext);
+
   return (
     <div className="ChatInputField">
-      {/* <MusicSelection /> */}
+      <MusicSelection />
       <textarea
         name="chattext"
         rows="4"
@@ -19,7 +23,15 @@ function ChatInputField() {
       <div className="ChatInputField__menu">
         <div className="ChatInputField__file-btns">
           <button className="ChatInputField__file-btn">🖼️</button>
-          <button className="ChatInputField__file-btn">🎵</button>
+          <button
+            className="ChatInputField__file-btn"
+            onClick={() => {
+              console.log("clicked");
+              handleSearchOpen();
+            }}
+          >
+            🎵
+          </button>
 
           <button className="ChatInputField__file-btn">😄</button>
         </div>
