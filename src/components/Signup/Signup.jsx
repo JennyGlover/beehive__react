@@ -17,7 +17,7 @@ function Signup() {
         <div className="Signup__headings">
           <h1 className="Signup__heading">Welcome to BeeHive</h1>
           <p className="Signup__sub-heading">
-            Where every bee finds their hive. Chat, video, and endless
+            Where every bee finds their hive. Chat, Music, and endless
             buzz!🐝🍯💬
           </p>
         </div>

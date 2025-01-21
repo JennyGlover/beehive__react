@@ -1,99 +1,99 @@
 .ChatHeader {
-    background-color: rgb(252, 251, 252);
-    height: 48px;
-    border-bottom: 1.9px solid rgb(234, 237, 236);
-    padding-top: 12px;
-    padding-left: 20px;
-    display: flex;
-    justify-content: space-between;
-    padding: 6px 0px 6px 20px;
-    align-items: center;
+  background-color: rgb(252, 251, 252);
+  height: 48px;
+  border-bottom: 1.9px solid rgb(234, 237, 236);
+  padding-top: 12px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0px 6px 20px;
+  align-items: center;
 }
 
 .ChatHeader__receiver-icon {
-    align-self: center;
-    background-image: url("/src/assets/pexels-minan1398-1165641.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 100px;
+  align-self: center;
+  background-image: url("/src/assets/pexels-minan1398-1165641.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
 }
 
 .ChatHeader__receiver {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .ChatHeader__receiver-icon {
-    align-self: center;
-    background-image: url("/src/assets/pexels-minan1398-1165641.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 100px;
+  align-self: center;
+  background-image: url("/src/assets/pexels-minan1398-1165641.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
 }
 
 .ChatHeader__Receiver-name {
-    font-size: 15px;
-    font-weight: 400;
-    margin-bottom: 3px;
-    font-family: "Abril Fatface", serif;
-    color: rgb(217, 153, 27);
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 3px;
+  font-family: "Abril Fatface", serif;
+  color: rgb(217, 153, 27);
 }
 
 .ChatHeader__Receiver-status-container {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .ChatHeader__Receiver-status {
-    font-size: 13px;
-    font-weight: 500;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .ChatHeader__status-dot {
-    width: 9px;
-    height: 9px;
-    background-color: rgb(27, 151, 58);
-    border-radius: 100px;
+  width: 9px;
+  height: 9px;
+  background-color: rgb(27, 151, 58);
+  border-radius: 100px;
 }
 
 .ChatHeader__menu {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    padding-right: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding-right: 20px;
 }
 
 .ChatHeader__profile-btn {
-    border-radius: 100px;
-    padding: 7px 12px;
-    color: rgb(217, 153, 27);
-    font-weight: 700;
-    background-color: white;
-    border: 2px solid rgba(212, 212, 212, 0.568);
-    cursor: pointer;
-    font-size: 14px;
+  border-radius: 100px;
+  padding: 7px 12px;
+  color: rgb(217, 153, 27);
+  font-weight: 700;
+  background-color: white;
+  border: 2px solid rgba(212, 212, 212, 0.568);
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .ChatHeader__profile-btn:hover {
-    color: rgba(217, 154, 27, 0.712);
+  color: rgba(217, 154, 27, 0.712);
 }
 
 .ChatHeader__video-icon {
-    background-image: url("/src/assets/video-solid\ \(2\).svg");
-    background-size: cover;
-    height: 25px;
-    width: 25px;
-    margin-right: 5px;
-    cursor: pointer;
+  background-image: url("/src/assets/video-solid\ \(2\).svg");
+  background-size: cover;
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+  cursor: pointer;
 }
 
 .ChatHeader__video-icon:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }

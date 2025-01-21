@@ -14,7 +14,7 @@ function ChatHeader() {
         </div>
       </div>
       <div className="ChatHeader__menu">
-        <div className="ChatHeader__video-icon"></div>
+        {/* <div className="ChatHeader__video-icon"></div> */}
         <button className="ChatHeader__profile-btn">View Profile</button>
       </div>
     </div>
