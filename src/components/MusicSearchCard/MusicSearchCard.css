@@ -1,13 +1,17 @@
 .MusicSearchCard {
   background-color: rgba(105, 105, 105, 0.11);
-  width: fit-content;
+  width: 160px;
   height: fit-content;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 10px;
   display: flex;
   gap: 10px;
   margin-bottom: 4px;
   cursor: pointer;
+}
+
+.MusicSearchCard:hover {
+  background-color: rgba(105, 105, 105, 0.06);
 }
 
 .MusicSearchCard__position-left {
@@ -20,22 +24,35 @@
 
 .MusicSearchCard__song-icon {
   align-self: center;
-  background-image: url("/src/assets/Espresso_-_Sabrina_Carpenter.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   width: 35px;
   height: 35px;
   border-radius: 5px;
+  background-color: aqua;
+  overflow: hidden;
+}
+
+.MusicSearchCard__album-img {
+  width: 100%;
+  height: 100%;
 }
 
 .MusicSearchCard__song-name {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   margin-bottom: 3px;
+  white-space: nowrap;
+  width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #000000bb;
 }
 
 .MusicSearchCard__artist-name {
   font-size: 12px;
   font-weight: 500;
+  width: 110px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #000000a9;
 }

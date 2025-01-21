@@ -5,7 +5,8 @@ import { MusicSearchContext } from "../../contexts/AppContexts";
 import "./ChatInputField.css";
 
 function ChatInputField() {
-  const { handleSearchOpen } = useContext(MusicSearchContext);
+  const { handleSearchOpen, isMusicSelVisible, handleMusicSelClose } =
+    useContext(MusicSearchContext);
 
   return (
     <div className="ChatInputField">
@@ -14,8 +15,11 @@ function ChatInputField() {
         name="chattext"
         rows="4"
         cols="50"
-        className="ChatInputField__textarea"
-        // className="ChatInputField__textarea ChatInputField__textarea_style-music"
+        className={
+          isMusicSelVisible
+            ? "ChatInputField__textarea ChatInputField__textarea_style-music"
+            : "ChatInputField__textarea"
+        }
         placeholder="Write a message..."
       />
 
@@ -26,7 +30,6 @@ function ChatInputField() {
           <button
             className="ChatInputField__file-btn"
             onClick={() => {
-              console.log("clicked");
               handleSearchOpen();
             }}
           >

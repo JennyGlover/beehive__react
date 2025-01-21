@@ -12,6 +12,10 @@
   justify-content: center;
 }
 
+.MusicSelection__display_none {
+  display: none;
+}
+
 .MusicSelection__close-btn {
   text-align: right;
   font-weight: 400;

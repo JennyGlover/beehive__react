@@ -11,7 +11,7 @@
   display: block;
 }
 
-.MusicSearch__type_disabled {
+.MusicSearch__display_none {
   display: none;
 }
 
@@ -116,6 +116,7 @@
 
 .MusicSearch__results {
   display: flex;
+  flex-direction: row;
   gap: 10px;
   flex-wrap: wrap;
   margin-top: 20px;

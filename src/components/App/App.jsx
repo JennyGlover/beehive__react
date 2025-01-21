@@ -9,31 +9,42 @@ import fetchSpotifyData from "../../utils/spotifyApi";
 
 function App() {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
-  const [isMusicSelectionVisible, setIsMusicSelectionVisible] = useState(false);
-
+  const [isMusicSelVisible, setIsMusicSelVisible] = useState(false);
+  const [songData, setSongData] = useState();
   //Opening and closing music search area
   const handleSearchOpen = () => {
     setIsSearchVisible(true);
+    setIsMusicSelVisible(true); //delete this when the selection system is built
   };
   const handleSearchClose = () => {
     setIsSearchVisible(false);
   };
 
   //opening and closing music selection
+  const handleMusicSelOpen = () => {
+    setIsMusicSelVisible(true);
+  };
+  const handleMusicSelClose = () => {
+    setIsMusicSelVisible(false);
+  };
 
   //fetch search results from spotify
-  useEffect(() => {
+  const handleSongSearch = (song) => {
     const getSpotifyData = async () => {
       try {
-        const data = await fetchSpotifyData();
-        console.log(data);
+        const data = await fetchSpotifyData(song);
+        setSongData(data);
       } catch (error) {
         console.error("Failed to fetch song data:", error);
       }
     };
 
     getSpotifyData();
-  }, []);
+  };
+
+  useEffect(() => {
+    console.log(songData);
+  }, [songData]);
 
   return (
     <>
@@ -41,10 +52,14 @@ function App() {
         value={{
           isSearchVisible,
           setIsSearchVisible,
-          isMusicSelectionVisible,
-          setIsMusicSelectionVisible,
+          isMusicSelVisible,
+          setIsMusicSelVisible,
           handleSearchOpen,
           handleSearchClose,
+          handleMusicSelOpen,
+          handleMusicSelClose,
+          handleSongSearch,
+          songData,
         }}
       >
         <Routes>
