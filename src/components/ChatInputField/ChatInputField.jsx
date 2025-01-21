@@ -1,3 +1,4 @@
+import MusicSearch from "../MusicSearch/MusicSearch";
 import "./ChatInputField.css";
 
 function ChatInputField() {
@@ -10,6 +11,7 @@ function ChatInputField() {
         className="ChatInputField__textarea"
         placeholder="Write a message..."
       />
+      <MusicSearch />
       <div className="ChatInputField__menu">
         <div className="ChatInputField__file-btns">
           <button className="ChatInputField__file-btn">🖼️</button>

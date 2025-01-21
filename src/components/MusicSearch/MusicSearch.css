@@ -1,0 +1,94 @@
+.MusicSearch {
+  height: 270px;
+  background-color: rgba(241, 224, 190, 0.068);
+  width: 97%;
+  padding: 5px 15px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 1.5px solid rgb(237, 237, 237);
+  overflow: hidden;
+}
+
+.MusicSearch__Header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.MusicSearch__profile-container {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  gap: 10px;
+}
+
+.MusicSearch__heading {
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(211, 151, 27);
+}
+
+.MusicSearch__user-icon {
+  align-self: center;
+  background-image: url("/src/assets/pexels-jonasandrox-1251171.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+}
+
+.MusicSearch__spotify-icon {
+  background-image: url("/src/assets/Spotify_logo_with_text.svg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80px;
+  border-radius: 5px;
+}
+
+.MusicSearch__search {
+  border-radius: 8px;
+  padding: 8px 20px;
+  border: 1.8px solid rgb(209, 209, 209);
+  background-color: rgba(241, 241, 241, 0.192);
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 15px;
+  width: 270px;
+  margin-bottom: 10px;
+}
+
+.MusicSearch__search:focus {
+  border: 1.8px solid rgb(236, 166, 14);
+  outline: none;
+}
+
+.MusicSearch__search-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.MusicSearch__search-icon {
+  position: absolute;
+  top: 1px;
+  right: 22px;
+  background-image: url("/src/assets/magnifying-glass-solid\ \(2\).svg");
+  background-size: cover;
+  height: 18px;
+  width: 18px;
+  margin-right: 5px;
+  cursor: text;
+}
+
+.MusicSearch__results-container {
+  overflow: auto;
+  height: 200px;
+}
+
+.MusicSearch__results {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}

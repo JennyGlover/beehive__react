@@ -7,6 +7,7 @@
   display: flex;
   gap: 10px;
   margin-bottom: 4px;
+  cursor: pointer;
 }
 
 .MusicCard__position-left {
