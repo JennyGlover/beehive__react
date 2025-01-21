@@ -12,7 +12,7 @@ function ChatBox() {
         <MusicCard position="right" />
         <ChatCard position="right" />
         <ImageCard position="right" />
-        <TimeSent position="right"/>
+        <TimeSent position="right" />
       </div>
     </div>
   );

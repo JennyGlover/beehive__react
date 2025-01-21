@@ -15,7 +15,7 @@ function ChatInputField() {
         placeholder="Write a message..."
       />
 
-      {/* <MusicSearch /> */}
+      <MusicSearch />
       <div className="ChatInputField__menu">
         <div className="ChatInputField__file-btns">
           <button className="ChatInputField__file-btn">🖼️</button>
