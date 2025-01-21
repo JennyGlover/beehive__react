@@ -1,0 +1,14 @@
+.TimeSent {
+    width: fit-content;
+    font-size: 11px;
+    margin-top: 4px;
+    color: #000000d3;
+}
+
+.TimeSent__position-right {
+    align-self: flex-end;
+}
+
+.TimeSent__position-left {
+    align-self: flex-start;
+}
