@@ -1,0 +1,11 @@
+.EmojiPickerContainer {
+  display: block;
+  position: absolute;
+  bottom: 200px;
+  left: 10px;
+  z-index: 5;
+}
+
+.EmojiPickerContainer__display-none {
+  display: none;
+}

@@ -18,14 +18,16 @@ function App() {
   const [songData, setSongData] = useState();
   const [musicSelData, setMusicSelData] = useState();
   const [messageValues, setMessageValues] = useState([]);
+  const [isEmojiPickerVisible, setIsEmojiPickerVisible] = useState(false);
 
   //Opening and closing music search area
   const handleSearchOpen = () => {
     handleImgInputClose();
     setIsMusicSelVisible(false);
     setIsImgInputVisible(false);
-    setIsImgPreviewVisible(false)
+    setIsImgPreviewVisible(false);
     setIsSearchVisible(true);
+    setIsEmojiPickerVisible(false);
   };
   const handleSearchClose = () => {
     setIsSearchVisible(false);
@@ -45,11 +47,20 @@ function App() {
   //opening and closing image url input
   const handleImgInputOpen = () => {
     setIsSearchVisible(false);
+    setIsEmojiPickerVisible(false);
     setIsImgInputVisible(true);
   };
   //opening and closing image url input
   const handleImgInputClose = () => {
+    setIsEmojiPickerVisible(false);
     setIsImgInputVisible(false);
+  };
+
+  //closing emojie modal with escape
+  const handleCloseEmojiModal = (e) => {
+    if (e.key === "Escape") {
+      setIsEmojiPickerVisible(false);
+    }
   };
 
   //fetch search results from spotify
@@ -64,19 +75,16 @@ function App() {
     };
 
     getSpotifyData();
-    
   };
 
   //sending text message
   const sendTextMessage = (values) => {
     console.log(values);
-       setMessageValues(() => [values]);
-       
-  }
+    setMessageValues(() => [values]);
+  };
   useEffect(() => {
-    console.log(messageValues)
-  }, [messageValues])
-
+    console.log(messageValues);
+  }, [messageValues]);
 
   return (
     <>
@@ -105,6 +113,8 @@ function App() {
             setIsImgPreviewVisible,
             messageValues,
             sendTextMessage,
+            isEmojiPickerVisible,
+            setIsEmojiPickerVisible, //this needs to be in its own context
           }}
         >
           <Routes>

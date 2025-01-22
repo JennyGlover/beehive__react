@@ -1,40 +1,40 @@
 .MusicSelection {
-    margin-top: 10px;
-    width: 95%;
-    height: 85px;
-    position: relative;
-    top: 20px;
-    border: 1px solid rgba(128, 128, 128, 0.247);
-    border-radius: 5px 5px 0px 0px;
-    border-bottom: none;
-    padding: 14px 10px 0;
-    display: flex;
-    justify-content: center;
+  margin-top: 10px;
+  width: 95%;
+  height: 85px;
+  position: relative;
+  top: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.247);
+  border-radius: 5px 5px 0px 0px;
+  border-bottom: none;
+  padding: 14px 10px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .MusicSelection__display_none {
-    display: none;
+  display: none;
 }
 
 .MusicSelection__close-btn {
-    text-align: right;
-    font-weight: 400;
-    font-size: 18px;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.658);
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url("/src/assets/circle-xmark-solid\ \(2\).svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 21px;
-    height: 21px;
-    border-radius: 20px;
-    margin-top: 5px;
-    position: relative;
-    right: 18px;
-    top: -11px;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(224, 224, 224);
-    opacity: 0.8;
+  text-align: right;
+  font-weight: 400;
+  font-size: 18px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.658);
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("/src/assets/circle-xmark-solid\ \(2\).svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 21px;
+  height: 21px;
+  border-radius: 20px;
+  margin-top: 5px;
+  position: relative;
+  right: 18px;
+  top: -11px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(224, 224, 224);
+  opacity: 0.8;
 }
