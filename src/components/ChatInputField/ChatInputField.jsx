@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import MusicSearch from "../MusicSearch/MusicSearch";
 import MusicSelection from "../MusicSelection/MusicSelection";
 import {
@@ -8,44 +8,67 @@ import {
 import "./ChatInputField.css";
 
 function ChatInputField() {
+  const [imageUrl, setImageUrl] = useState(""); //input url
+  const [isValidImage, setIsValidImage] = useState(false);
+
   const {
     handleSearchOpen,
     isMusicSelVisible,
     isSearchVisible,
     handleMusicSelClose,
   } = useContext(MusicSearchContext);
-  const { isImgInputVisible, handleImgInputOpen } =
+  const { isImgInputVisible, handleImgInputOpen, handleImgInputClose } =
     useContext(ImageInputContext);
-
-  const urlInputOpen = "ChatInputField__image-input";
-  const urlInpuClose = "ChatInputField__image-input_display-none";
 
   return (
     <div className="ChatInputField">
       <MusicSelection />
+
       <form action="" className="ChatInputField__form"></form>
+
+      <div
+        className={
+          isValidImage
+            ? "ChatInputField__img-preview"
+            : "ChatInputField__img-preview_display-none"
+        }
+      >
+        <img className="ChatInputField__img" src={"imageUrl"} alt="preview" />
+      </div>
+
       <textarea
         name="chattext"
         rows="4"
         cols="50"
         className={
-          isMusicSelVisible
+          isMusicSelVisible || (isImgInputVisible && isValidImage)
             ? "ChatInputField__textarea ChatInputField__textarea_style-music"
             : "ChatInputField__textarea"
         }
         placeholder="Write a message..."
       />
-      <input
+      <div
         className={
-          isImgInputVisible && !isSearchVisible ? urlInputOpen : urlInpuClose
+          isImgInputVisible && !isSearchVisible
+            ? "ChatInputField__url-container"
+            : "ChatInputField__url-container_display-none"
         }
-        type="url"
-        name="image"
-        value=""
-        id="chat-image-input"
-        placeholder="Enter an image url"
-      />
-
+      >
+        <input
+          className="ChatInputField__image-input"
+          type="url"
+          name="image"
+          value=""
+          id="chat-image-input"
+          placeholder="Enter an image url"
+        />
+        <div
+          className="ChatInputField__close-btn"
+          onClick={() => {
+            handleImgInputClose();
+          }}
+        ></div>
+      </div>
       <MusicSearch />
       <div className="ChatInputField__menu">
         <div className="ChatInputField__file-btns">

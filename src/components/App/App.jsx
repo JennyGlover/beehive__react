@@ -37,6 +37,7 @@ function App() {
 
   //opening and closing image url input
   const handleImgInputOpen = () => {
+    setIsSearchVisible(false);
     setIsImgInputVisible(true);
   };
   //opening and closing image url input
