@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { MusicSearchContext } from "../../contexts/AppContexts";
+import {
+  MusicSearchContext,
+  ImageInputContext,
+} from "../../contexts/AppContexts";
 import Main from "../Main/Main";
 import Signup from "../Signup/Signup";
 import Login from "../Login/Login";
@@ -10,6 +13,7 @@ import fetchSpotifyData from "../../utils/spotifyApi";
 function App() {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [isMusicSelVisible, setIsMusicSelVisible] = useState(false);
+  const [isImgInputVisible, setIsImgInputVisible] = useState(false);
   const [songData, setSongData] = useState();
   const [musicSelData, setMusicSelData] = useState();
   //Opening and closing music search area
@@ -19,6 +23,7 @@ function App() {
   };
   const handleSearchClose = () => {
     setIsSearchVisible(false);
+    setIsImgInputVisible(false);
   };
 
   //opening and closing music selection
@@ -28,6 +33,15 @@ function App() {
   };
   const handleMusicSelClose = () => {
     setIsMusicSelVisible(false);
+  };
+
+  //opening and closing image url input
+  const handleImgInputOpen = () => {
+    setIsImgInputVisible(true);
+  };
+  //opening and closing image url input
+  const handleImgInputClose = () => {
+    setIsImgInputVisible(false);
   };
 
   //fetch search results from spotify
@@ -69,11 +83,20 @@ function App() {
           musicSelData,
         }}
       >
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
+        <ImageInputContext.Provider
+          value={{
+            isImgInputVisible,
+            setIsImgInputVisible,
+            handleImgInputOpen,
+            handleImgInputClose,
+          }}
+        >
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </ImageInputContext.Provider>
       </MusicSearchContext.Provider>
     </>
   );

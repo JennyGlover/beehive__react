@@ -1,4 +1,4 @@
 const SpotifyAccessToken =
-  "BQDaTiPae-tKC1cyQ1Jd92FgXqIN-GIXVGMeHdYDeE2GkZjHzkALUBC8dxgmfheAmgPO0VZFkol9YYAYwKOCsQboo-L7yO9gFUw_7w73j0l9x1K0i_c";
+  "BQDx3K3m8ItqPi__IkEv8o-YIrNIXhUnk72WLJJiT7ewKEz0gKy9nf543hyzpY2p4r-X6OgVXlcWsiq6gWaELrSRheBFym0lwkdKar2hBIdii40NQhQ";
 
 export default { SpotifyAccessToken };
