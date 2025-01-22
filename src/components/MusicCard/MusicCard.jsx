@@ -4,7 +4,6 @@ import { MusicSearchContext } from "../../contexts/AppContexts";
 
 function MusicCard({ position }) {
   const { musicSelData } = useContext(MusicSearchContext);
-  console.log("Card area:", musicSelData);
   return (
     <div className={`MusicCard MusicCard__position-${position}`}>
       <div className="MusicCard__song-icon">

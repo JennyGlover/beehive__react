@@ -15,14 +15,28 @@ function ChatInputField() {
   const { values, handleChange } = useForm({
     chattext: "",
   });
- 
+  
+  //funct for displaying preview img
+  const handleUrlChange = (e) => {
+    const url = e.target.value;
+    setImageUrl(url);
+
+    //validating image url
+    if(url.match(/\.(jpeg|jpg|gif|pngwebp|svg)$/i)){
+      setIsValidImage(true);
+      setIsImgPreviewVisible(true);
+    } else {
+      setIsValidImage(false);
+    }
+  };
+
   const {
     handleSearchOpen,
     isMusicSelVisible,
     isSearchVisible,
     handleMusicSelClose,
   } = useContext(MusicSearchContext);
-  const { isImgInputVisible, handleImgInputOpen, handleImgInputClose } =
+  const { isImgInputVisible, handleImgInputOpen, handleImgInputClose, isImgPreviewVisible, setIsImgPreviewVisible } =
     useContext(ImageInputContext);
 
   return (
@@ -33,12 +47,12 @@ function ChatInputField() {
 
       <div
         className={
-          isValidImage
+          isValidImage && isImgPreviewVisible
             ? "ChatInputField__img-preview"
             : "ChatInputField__img-preview_display-none"
         }
       >
-        <img className="ChatInputField__img" src={"imageUrl"} alt="preview" />
+        <img className="ChatInputField__img" src={imageUrl} alt="preview" />
       </div>
 
       <textarea
@@ -65,13 +79,15 @@ function ChatInputField() {
           className="ChatInputField__image-input"
           type="url"
           name="image"
-          value=""
-          id="chat-image-input"
+          value={values.image}
+          id="image"
           placeholder="Enter an image url"
+          onChange={(e) => handleUrlChange(e)}
         />
         <div
           className="ChatInputField__close-btn"
           onClick={() => {
+            setIsImgPreviewVisible(false)
             handleImgInputClose();
           }}
         ></div>
@@ -82,6 +98,7 @@ function ChatInputField() {
           <button
             className="ChatInputField__file-btn"
             onClick={() => {
+              setIsImgPreviewVisible(true);
               handleImgInputOpen();
             }}
           >

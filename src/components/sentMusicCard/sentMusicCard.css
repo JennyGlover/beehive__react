@@ -1,0 +1,74 @@
+.SentMusicCard {
+    background-color: rgba(0, 255, 255, 0.171);
+    width: 200px;
+    height: fit-content;
+    padding: 10px 10px;
+    border-radius: 15px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.SentMusicCard__position-left {
+    align-self: flex-start;
+}
+
+.SentMusicCard__position-right {
+    align-self: flex-end;
+}
+
+.SentMusicCard__song-icon {
+    align-self: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: rgba(0, 255, 255, 0.055);
+    overflow: hidden;
+}
+
+.SentMusicCard__album-img {
+    width: 100%;
+    height: 100%;
+}
+
+.SentMusicCard__song-name {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 3px;
+    width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.SentMusicCard__artist-name {
+    font-size: 12px;
+    font-weight: 500;
+    width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.SentMusicCard__spotify-logo {
+    background-image: url("/src/assets/Spotify_logo_with_text.svg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 18px;
+    border-radius: 5px;
+    margin-top: 2px;
+}
+
+.SentMusicCard__play-icon {
+    align-self: center;
+    background-image: url("/src/assets/circle-play-solid.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}

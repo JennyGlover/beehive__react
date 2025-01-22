@@ -14,16 +14,20 @@ function App() {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [isMusicSelVisible, setIsMusicSelVisible] = useState(false);
   const [isImgInputVisible, setIsImgInputVisible] = useState(false);
+  const [isImgPreviewVisible, setIsImgPreviewVisible] = useState(false);
   const [songData, setSongData] = useState();
   const [musicSelData, setMusicSelData] = useState();
   //Opening and closing music search area
   const handleSearchOpen = () => {
-    setIsSearchVisible(true);
     setIsMusicSelVisible(false);
+    setIsImgInputVisible(false);
+    setIsImgPreviewVisible(false)
+    setIsSearchVisible(true);
   };
   const handleSearchClose = () => {
     setIsSearchVisible(false);
     setIsImgInputVisible(false);
+
   };
 
   //opening and closing music selection
@@ -59,14 +63,6 @@ function App() {
     getSpotifyData();
   };
 
-  useEffect(() => {
-    console.log(songData);
-  }, [songData]);
-
-  useEffect(() => {
-    console.log(musicSelData);
-  }, [musicSelData]);
-
   return (
     <>
       <MusicSearchContext.Provider
@@ -90,6 +86,8 @@ function App() {
             setIsImgInputVisible,
             handleImgInputOpen,
             handleImgInputClose,
+            isImgPreviewVisible,
+            setIsImgPreviewVisible,
           }}
         >
           <Routes>

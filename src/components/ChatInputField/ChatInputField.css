@@ -30,10 +30,10 @@
 }
 
 .ChatInputField__textarea:focus {
-    outline: 1px solid rgb(217, 153, 27);
+    outline: none;
 }
 
-.ChatInputField__textarea_style-music:focus,
+
 .ChatInputField__img-preview:focus,
 .ChatInputField__image-input:focus {
     outline: none;
@@ -61,8 +61,9 @@
 
 .ChatInputField__img {
     width: 180px;
-    height: 180px;
+    height: auto;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .ChatInputField__menu {
