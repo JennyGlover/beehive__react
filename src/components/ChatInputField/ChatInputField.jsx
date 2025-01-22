@@ -22,7 +22,7 @@ function ChatInputField() {
     setImageUrl(url);
 
     //validating image url
-    if(url.match(/\.(jpeg|jpg|gif|pngwebp|svg)$/i)){
+    if(url.match(/\.(jpeg|jpg|gif|png|webp|svg)(\?.*)?$/i)){
       setIsValidImage(true);
       setIsImgPreviewVisible(true);
     } else {
@@ -42,7 +42,7 @@ function ChatInputField() {
   return (
     <div className="ChatInputField">
       <MusicSelection />
-
+      
       <form action="" className="ChatInputField__form"></form>
 
       <div
@@ -52,7 +52,15 @@ function ChatInputField() {
             : "ChatInputField__img-preview_display-none"
         }
       >
+        <div className="ChatInputField__img-container">
         <img className="ChatInputField__img" src={imageUrl} alt="preview" />
+           <div
+        className={!isImgPreviewVisible? "ChatInputField__img-close-btn_display-none" : "ChatInputField__img-close-btn"}
+        onClick={() => {
+          setIsImgPreviewVisible(false);
+        }}
+      ></div>
+        </div>
       </div>
 
       <textarea
@@ -61,7 +69,7 @@ function ChatInputField() {
         cols="50"
         value={values.chattext}
         className={
-          isMusicSelVisible || (isImgInputVisible && isValidImage)
+          isMusicSelVisible || (isImgPreviewVisible && isValidImage)
             ? "ChatInputField__textarea ChatInputField__textarea_style-music"
             : "ChatInputField__textarea"
         }
