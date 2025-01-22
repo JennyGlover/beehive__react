@@ -8,7 +8,6 @@ function useForm(initialValues) {
     const { value, name } = e.target;
     //Dynamically setting the key in the object
     setValues({ ...values, [name]: value });
-    console.log(values);
   };
 
   //reseting the form

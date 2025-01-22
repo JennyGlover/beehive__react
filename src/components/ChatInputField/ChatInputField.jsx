@@ -12,8 +12,10 @@ function ChatInputField() {
   const [imageUrl, setImageUrl] = useState(""); //input url
   const [isValidImage, setIsValidImage] = useState(false);
   
-  const { values, handleChange } = useForm({
+  const { values, handleChange, resetForm } = useForm({
     chattext: "",
+    image: "",
+    song: "",
   });
   
   //funct for displaying preview img
@@ -30,21 +32,26 @@ function ChatInputField() {
     }
   };
 
+  //handling sending text or media
+  const handleSubmitText = () => {
+    ///take all the values 
+    sendTextMessage(values);
+  }
+
   const {
     handleSearchOpen,
     isMusicSelVisible,
     isSearchVisible,
     handleMusicSelClose,
   } = useContext(MusicSearchContext);
-  const { isImgInputVisible, handleImgInputOpen, handleImgInputClose, isImgPreviewVisible, setIsImgPreviewVisible } =
+  const { isImgInputVisible, handleImgInputOpen, handleImgInputClose, isImgPreviewVisible, setIsImgPreviewVisible, sendTextMessage} =
     useContext(ImageInputContext);
 
   return (
     <div className="ChatInputField">
-      <MusicSelection />
-      
-      <form action="" className="ChatInputField__form"></form>
+      <MusicSelection />   
 
+      <form action="" className="ChatInputField__form">
       <div
         className={
           isValidImage && isImgPreviewVisible
@@ -58,6 +65,8 @@ function ChatInputField() {
         className={!isImgPreviewVisible? "ChatInputField__img-close-btn_display-none" : "ChatInputField__img-close-btn"}
         onClick={() => {
           setIsImgPreviewVisible(false);
+          setIsValidImage(false);
+          resetForm();
         }}
       ></div>
         </div>
@@ -90,7 +99,9 @@ function ChatInputField() {
           value={values.image}
           id="image"
           placeholder="Enter an image url"
-          onChange={(e) => handleUrlChange(e)}
+          onChange={(e) => {
+            handleChange(e)
+            handleUrlChange(e)}}
         />
         <div
           className="ChatInputField__close-btn"
@@ -104,6 +115,7 @@ function ChatInputField() {
       <div className="ChatInputField__menu">
         <div className="ChatInputField__file-btns">
           <button
+          type="button"
             className="ChatInputField__file-btn"
             onClick={() => {
               setIsImgPreviewVisible(true);
@@ -113,6 +125,7 @@ function ChatInputField() {
             🖼️
           </button>
           <button
+          type="button"
             className="ChatInputField__file-btn"
             onClick={() => {
               handleSearchOpen();
@@ -121,12 +134,19 @@ function ChatInputField() {
             🎵
           </button>
 
-          <button className="ChatInputField__file-btn">😄</button>
+          <button type="button" className="ChatInputField__file-btn">😄</button>
         </div>
-        <button type="submit" className={values.chattext || isMusicSelVisible?  "ChatInputField__send-btn" : "ChatInputField__send-btn_type-disabled"}>
+        <button type="button" 
+        className={values.chattext || (values.image && isValidImage && isImgPreviewVisible ) || isMusicSelVisible ?  "ChatInputField__send-btn" : "ChatInputField__send-btn_type-disabled"}
+        onClick={(e) => {
+          e.preventDefault();
+          handleSubmitText();
+        }}
+        >
           Send
         </button>
       </div>
+      </form>
     </div>
   );
 }

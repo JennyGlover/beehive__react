@@ -14,6 +14,7 @@ function MusicSearch() {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
+      e.preventDefault();
       handleSongSearch(values.song);
     }
   };

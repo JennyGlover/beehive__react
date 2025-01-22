@@ -17,8 +17,11 @@ function App() {
   const [isImgPreviewVisible, setIsImgPreviewVisible] = useState(false);
   const [songData, setSongData] = useState();
   const [musicSelData, setMusicSelData] = useState();
+  const [messageValues, setMessageValues] = useState([]);
+
   //Opening and closing music search area
   const handleSearchOpen = () => {
+    handleImgInputClose();
     setIsMusicSelVisible(false);
     setIsImgInputVisible(false);
     setIsImgPreviewVisible(false)
@@ -27,7 +30,7 @@ function App() {
   const handleSearchClose = () => {
     setIsSearchVisible(false);
     setIsImgInputVisible(false);
-
+    setIsMusicSelVisible(false);
   };
 
   //opening and closing music selection
@@ -61,7 +64,19 @@ function App() {
     };
 
     getSpotifyData();
+    
   };
+
+  //sending text message
+  const sendTextMessage = (values) => {
+    console.log(values);
+       setMessageValues(() => [values]);
+       
+  }
+  useEffect(() => {
+    console.log(messageValues)
+  }, [messageValues])
+
 
   return (
     <>
@@ -88,6 +103,8 @@ function App() {
             handleImgInputClose,
             isImgPreviewVisible,
             setIsImgPreviewVisible,
+            messageValues,
+            sendTextMessage,
           }}
         >
           <Routes>
