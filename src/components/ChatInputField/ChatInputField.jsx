@@ -5,12 +5,17 @@ import {
   MusicSearchContext,
   ImageInputContext,
 } from "../../contexts/AppContexts";
+import useForm from "../../hooks/useForm";
 import "./ChatInputField.css";
 
 function ChatInputField() {
   const [imageUrl, setImageUrl] = useState(""); //input url
   const [isValidImage, setIsValidImage] = useState(false);
-
+  
+  const { values, handleChange } = useForm({
+    chattext: "",
+  });
+ 
   const {
     handleSearchOpen,
     isMusicSelVisible,
@@ -40,11 +45,13 @@ function ChatInputField() {
         name="chattext"
         rows="4"
         cols="50"
+        value={values.chattext}
         className={
           isMusicSelVisible || (isImgInputVisible && isValidImage)
             ? "ChatInputField__textarea ChatInputField__textarea_style-music"
             : "ChatInputField__textarea"
         }
+        onChange={(e) => handleChange(e)}
         placeholder="Write a message..."
       />
       <div
@@ -91,7 +98,7 @@ function ChatInputField() {
 
           <button className="ChatInputField__file-btn">😄</button>
         </div>
-        <button type="submit" className="ChatInputField__send-btn" disabled>
+        <button type="submit" className={values.chattext || isMusicSelVisible?  "ChatInputField__send-btn" : "ChatInputField__send-btn_type-disabled"}>
           Send
         </button>
       </div>
