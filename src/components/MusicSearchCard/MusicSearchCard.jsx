@@ -8,7 +8,7 @@ function MusicSearchCard({ position, songName, artistName, image }) {
   return (
     <div
       className={`MusicSearchCard MusicSearchCard__position-${position}`}
-      onClick={() => handleMusicSelOpen()}
+      onClick={() => handleMusicSelOpen({ songName, artistName, image })}
     >
       <div className="MusicSearchCard__song-icon">
         <img

@@ -11,17 +11,19 @@ function App() {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [isMusicSelVisible, setIsMusicSelVisible] = useState(false);
   const [songData, setSongData] = useState();
+  const [musicSelData, setMusicSelData] = useState();
   //Opening and closing music search area
   const handleSearchOpen = () => {
     setIsSearchVisible(true);
-    setIsMusicSelVisible(true); //delete this when the selection system is built
+    setIsMusicSelVisible(false);
   };
   const handleSearchClose = () => {
     setIsSearchVisible(false);
   };
 
   //opening and closing music selection
-  const handleMusicSelOpen = () => {
+  const handleMusicSelOpen = ({ songName, artistName, image }) => {
+    setMusicSelData({ songName, artistName, image });
     setIsMusicSelVisible(true);
   };
   const handleMusicSelClose = () => {
@@ -46,6 +48,10 @@ function App() {
     console.log(songData);
   }, [songData]);
 
+  useEffect(() => {
+    console.log(musicSelData);
+  }, [musicSelData]);
+
   return (
     <>
       <MusicSearchContext.Provider
@@ -60,6 +66,7 @@ function App() {
           handleMusicSelClose,
           handleSongSearch,
           songData,
+          musicSelData,
         }}
       >
         <Routes>

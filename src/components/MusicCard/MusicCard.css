@@ -1,8 +1,8 @@
 .MusicCard {
   background-color: rgba(0, 255, 255, 0.171);
-  width: fit-content;
+  width: 200px;
   height: fit-content;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 15px;
   display: flex;
   gap: 10px;
@@ -20,24 +20,35 @@
 
 .MusicCard__song-icon {
   align-self: center;
-  background-image: url("/src/assets/Espresso_-_Sabrina_Carpenter.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 5px;
+  background-color: rgba(0, 255, 255, 0.055);
+  overflow: hidden;
+}
+
+.MusicCard__album-img {
+  width: 100%;
+  height: 100%;
 }
 
 .MusicCard__song-name {
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 3px;
+  width: 110px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .MusicCard__artist-name {
   font-size: 12px;
   font-weight: 500;
+  width: 110px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .MusicCard__spotify-logo {

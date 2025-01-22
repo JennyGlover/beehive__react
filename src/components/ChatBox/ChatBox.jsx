@@ -9,7 +9,6 @@ function ChatBox() {
   return (
     <div className="ChatBox">
       <div className="ChatBox__container">
-        <MusicCard position="right" />
         <ChatCard position="right" />
         <ImageCard position="right" />
         <TimeSent position="right" />
