@@ -16,7 +16,7 @@ function EmojiPickerContainer() {
         console.log(e.target.src);
       }}
     >
-      <EmojiPicker height={440} width={350}/>
+      <EmojiPicker height={440} width={350} />
     </div>
   );
 }

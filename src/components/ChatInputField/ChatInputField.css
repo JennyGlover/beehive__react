@@ -26,7 +26,6 @@
   margin-top: 10px;
 }
 
-
 .ChatInputField__textarea:focus {
   outline: none;
 }
@@ -48,7 +47,7 @@
   align-items: center;
   position: relative;
   background-color: white;
-  bottom: -10px
+  bottom: -10px;
 }
 
 .ChatInputField__img-container {

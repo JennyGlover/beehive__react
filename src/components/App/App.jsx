@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Navigation from "../Navigation/Navigation"
+import Navigation from "../Navigation/Navigation";
 import {
   MusicSearchContext,
   ImageInputContext,
@@ -62,7 +62,7 @@ function App() {
   }, [messageValues]);
 
   return (
-    <>
+    <div className="App">
       <MusicSearchContext.Provider
         value={{
           isSearchVisible,
@@ -93,13 +93,13 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Main />} />
-            <Route path="/friends" element={<Friends />}/>
+            <Route path="/friends" element={<Friends />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
           </Routes>
         </ImageInputContext.Provider>
       </MusicSearchContext.Provider>
-    </>
+    </div>
   );
 }
 

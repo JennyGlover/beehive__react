@@ -40,39 +40,39 @@ function ChatInputField() {
 
   //opening and closing the emoji picker
   const toggleEmojiPicker = () => {
-    setIsSearchVisible(false)
+    setIsSearchVisible(false);
     setIsImgInputVisible(false);
     setIsEmojiPickerVisible((prev) => !prev);
   };
 
   //opening and music search container
-  const toggleMusicSearch = () =>{
-    if(isEmojiPickerVisible){
+  const toggleMusicSearch = () => {
+    if (isEmojiPickerVisible) {
       setIsEmojiPickerVisible(false);
     }
-     if(isImgInputVisible){
+       if(isImgPreviewVisible) {
+      setIsImgPreviewVisible(false);
+    }
+
+    if (isImgInputVisible) {
       setIsImgInputVisible(false);
     }
     setIsSearchVisible((prev) => !prev);
   };
 
-   //opening and music search container
-  const toggleImgInput = () =>{
-     if(isSearchVisible){
+  //opening and music search container
+  const toggleImgInput = () => {
+    if (isSearchVisible) {
       setIsSearchVisible(false);
     }
-    if(isEmojiPickerVisible){
+    if (isEmojiPickerVisible) {
       setIsEmojiPickerVisible(false);
     }
     setIsImgInputVisible((prev) => !prev);
-  }
-  
-  
-  const {
-    isMusicSelVisible,
-    isSearchVisible,
-    setIsSearchVisible,
-  } = useContext(MusicSearchContext);
+  };
+
+  const { isMusicSelVisible, isSearchVisible, setIsSearchVisible } =
+    useContext(MusicSearchContext);
   const {
     isImgInputVisible,
     isImgPreviewVisible,
@@ -118,7 +118,10 @@ function ChatInputField() {
           cols="50"
           value={values.chattext}
           className={
-             isSearchVisible || isImgInputVisible|| isImgPreviewVisible ||(isImgPreviewVisible && isValidImage)
+            isSearchVisible ||
+            isImgInputVisible ||
+            isImgPreviewVisible ||
+            (isImgPreviewVisible && isValidImage)
               ? "ChatInputField__textarea_display-none"
               : "ChatInputField__textarea"
           }

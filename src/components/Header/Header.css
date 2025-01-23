@@ -12,10 +12,9 @@
 }
 
 .Header__page-title {
-  font-size: 25px;
-  font-weight: 200;
-  font-family: "Abril Fatface", serif;
-  color: rgb(20, 20, 20);
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb(211, 151, 27);
   margin-bottom: 0;
 }
 
@@ -55,10 +54,6 @@
   margin-bottom: 0px;
 }
 
-.Header__line {
-  border: none;
-  border-top: 2px solid rgb(234, 237, 236);
-}
 
 .Header__notification-dot {
   position: absolute;

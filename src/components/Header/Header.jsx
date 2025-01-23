@@ -19,7 +19,6 @@ function Header() {
           </div>
         </div>
       </div>
-      <hr className="Header__line" />
       <p className="Header__friends-"></p>
     </div>
   );
