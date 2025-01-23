@@ -1,84 +1,84 @@
 .FriendsCard {
-    background-color: rgba(239, 240, 240, 0.13);
-    border-bottom: 1px solid rgba(128, 128, 128, 0.199);
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding: 20px 22px;
-    border-radius: 6px;
-    justify-content: space-between;
+  background-color: rgba(239, 240, 240, 0.13);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.199);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 20px 22px;
+  border-radius: 6px;
+  justify-content: space-between;
 }
 
 .FriendsCard__user-info {
-    display: flex;
+  display: flex;
 }
 
 .FriendsCard__profile-icon {
-    align-self: center;
-    background-image: url("/src/assets/placehoder-profile.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 100px;
-    margin-right: 10px;
+  align-self: center;
+  background-image: url("/src/assets/placehoder-profile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  margin-right: 10px;
 }
 
 .FriendsCard__name-container {
-    width: 300px;
-    overflow: hidden;
-    white-space: nowrap;
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .FriendsCard__name {
-    font-size: 18px;
-    margin-bottom: 4px;
-    margin-top: 8px;
-    font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 4px;
+  margin-top: 8px;
+  font-weight: 500;
 }
 
 .FriendsCard__quote {
-    font-size: 12px;
-    margin-top: 0;
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  font-size: 12px;
+  margin-top: 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .FriendsCard__Friendship {
-    font-size: 11px;
-    color: rgba(0, 0, 0, 0.705);
-    font-weight: 500;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.705);
+  font-weight: 500;
 }
 
 .FriendsCard__frnd-request-btn {
-    background-color: rgb(217, 153, 27);
-    width: 100px;
-    height: 35px;
-    border-radius: 100px;
-    display: flex;
-    border: 1.9px solid rgb(217, 153, 27);
-    justify-content: center;
-    align-items: center;
-    color: white;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 14px;
+  background-color: rgb(217, 153, 27);
+  width: 100px;
+  height: 35px;
+  border-radius: 100px;
+  display: flex;
+  border: 1.9px solid rgb(217, 153, 27);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .FriendsCard__frnd-message-btn {
-    background-color: rgb(255, 255, 255);
-    border: 1.9px solid rgb(217, 153, 27);
-    width: 100px;
-    height: 35px;
-    border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(217, 153, 27);
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 14px;
+  background-color: rgb(255, 255, 255);
+  border: 1.9px solid rgb(217, 153, 27);
+  width: 100px;
+  height: 35px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(217, 153, 27);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
 }

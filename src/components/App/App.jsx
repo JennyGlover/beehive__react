@@ -4,8 +4,10 @@ import Navigation from "../Navigation/Navigation";
 import {
   MusicSearchContext,
   ImageInputContext,
+  AuthenticationContext,
 } from "../../contexts/AppContexts";
 import Main from "../Main/Main";
+import ProtectedRoute from "../ProtectedRoute";
 import Friends from "../Friends/Friends";
 import Signup from "../Signup/Signup";
 import Login from "../Login/Login";
@@ -21,7 +23,7 @@ function App() {
   const [musicSelData, setMusicSelData] = useState();
   const [messageValues, setMessageValues] = useState([]);
   const [isEmojiPickerVisible, setIsEmojiPickerVisible] = useState(false);
-
+  const [isNavVisible, setIsNavVisible] = useState(true);
   //opening and closing music selection
   const handleMusicSelOpen = ({ songName, artistName, image }) => {
     setMusicSelData({ songName, artistName, image });
@@ -62,43 +64,79 @@ function App() {
   }, [messageValues]);
 
   return (
-    <div className="App">
-      <MusicSearchContext.Provider
+    <div className={isNavVisible ? "App" : "App_diplay-block"}>
+      <AuthenticationContext.Provider
         value={{
-          isSearchVisible,
-          setIsSearchVisible,
-          isMusicSelVisible,
-          setIsMusicSelVisible,
-          handleMusicSelOpen,
-          handleMusicSelClose,
-          handleSongSearch,
-          songData,
-          musicSelData,
+          isNavVisible,
+          setIsNavVisible,
         }}
       >
-        <ImageInputContext.Provider
+        <MusicSearchContext.Provider
           value={{
-            isImgInputVisible,
-            setIsImgInputVisible,
-            isImgPreviewVisible,
-            setIsImgPreviewVisible,
-            messageValues,
-            sendTextMessage,
-            isEmojiPickerVisible,
+            isSearchVisible,
             setIsSearchVisible,
-            setIsEmojiPickerVisible, //this needs to be in its own context
+            isMusicSelVisible,
+            setIsMusicSelVisible,
+            handleMusicSelOpen,
+            handleMusicSelClose,
+            handleSongSearch,
+            songData,
+            musicSelData,
           }}
         >
-          <Navigation />
+          <ImageInputContext.Provider
+            value={{
+              isImgInputVisible,
+              setIsImgInputVisible,
+              isImgPreviewVisible,
+              setIsImgPreviewVisible,
+              messageValues,
+              sendTextMessage,
+              isEmojiPickerVisible,
+              setIsSearchVisible,
+              setIsEmojiPickerVisible, //this needs to be in its own context
+            }}
+          >
+            <Navigation />
+            {/* if anonymous take context and set nav to display none */}
 
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/friends" element={<Friends />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-          </Routes>
-        </ImageInputContext.Provider>
-      </MusicSearchContext.Provider>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <ProtectedRoute>
+                    <Main />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/friends"
+                element={
+                  <ProtectedRoute>
+                    <Friends />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/signup"
+                element={
+                  <ProtectedRoute anonymous>
+                    <Signup />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/login"
+                element={
+                  <ProtectedRoute anonymous>
+                    <Login />
+                  </ProtectedRoute>
+                }
+              />
+            </Routes>
+          </ImageInputContext.Provider>
+        </MusicSearchContext.Provider>
+      </AuthenticationContext.Provider>
     </div>
   );
 }

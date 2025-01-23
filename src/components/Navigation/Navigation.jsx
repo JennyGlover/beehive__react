@@ -1,10 +1,14 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthenticationContext } from "../../contexts/AppContexts";
 import logo from "../../assets/beehive-logo.png";
 import "./Navigation.css";
 
 function Navigation() {
+  const { isNavVisible } = useContext(AuthenticationContext);
+
   return (
-    <div className="Navigation">
+    <div className={isNavVisible ? "Navigation" : "Navigation_display-none"}>
       <div className="Navigation__logo-container">
         <img className="Navigation__logo" src={logo} alt="BeeHive logo" />
         <p className="Navigation__logo-text">BeeHive</p>

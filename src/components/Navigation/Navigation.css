@@ -10,6 +10,10 @@
   left: 0px;
 }
 
+.Navigation_display-none {
+  display: none;
+}
+
 .Navigation__logo-container {
   display: flex;
   position: relative;

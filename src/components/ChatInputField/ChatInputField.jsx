@@ -50,7 +50,7 @@ function ChatInputField() {
     if (isEmojiPickerVisible) {
       setIsEmojiPickerVisible(false);
     }
-       if(isImgPreviewVisible) {
+    if (isImgPreviewVisible) {
       setIsImgPreviewVisible(false);
     }
 
