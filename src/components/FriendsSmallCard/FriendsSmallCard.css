@@ -8,6 +8,7 @@
   border-radius: 12px;
   justify-content: space-between;
   width: fit-content;
+  cursor: pointer;
 }
 
 .FriendsSmallCard__user-info {
@@ -27,7 +28,6 @@
 }
 
 .FriendsSmallCard__name-container {
-  width: 150px;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -38,8 +38,7 @@
   margin-top: 8px;
   font-weight: 500;
   display: flex;
-  flex-direction: column;
-  gap: 9px;
+  gap: 30px;
 }
 
 .FriendsSmallCard__Friendship {
@@ -51,8 +50,8 @@
 .FriendsSmallCard__frnd-message-btn {
   background-color: rgb(255, 255, 255);
   border: 1.5px solid rgb(217, 153, 27);
-  width: 100px;
-  height: 30px;
+  width: 80px;
+  height: 25px;
   margin-left: 1.5px;
   border-radius: 100px;
   display: flex;
@@ -61,5 +60,5 @@
   color: rgb(217, 153, 27);
   cursor: pointer;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
 }

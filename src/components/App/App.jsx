@@ -9,6 +9,7 @@ import {
 import Main from "../Main/Main";
 import ProtectedRoute from "../ProtectedRoute";
 import Friends from "../Friends/Friends";
+import Profile from "../Profile/Profile";
 import Signup from "../Signup/Signup";
 import Login from "../Login/Login";
 import "./App.css";
@@ -102,7 +103,7 @@ function App() {
 
             <Routes>
               <Route
-                path="/"
+                path="/messages"
                 element={
                   <ProtectedRoute>
                     <Main />
@@ -114,6 +115,14 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <Friends />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/"
+                element={
+                  <ProtectedRoute>
+                    <Profile />
                   </ProtectedRoute>
                 }
               />

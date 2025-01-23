@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AuthenticationContext } from "../../contexts/AppContexts";
 import logo from "../../assets/beehive-logo.png";
 import "./Navigation.css";
@@ -16,24 +16,36 @@ function Navigation() {
       <hr className="Navigation__line"></hr>
       <p className="Navigation__menu-text">Menu </p>
       <div className="Navigation__page-Links">
-        <Link to="/friends" className="Navigation__link">
-          <p className="Navigation__page-link">
-            👯‍♀️ Friends{" "}
-            <span className="Navigation__link-counter Navigation__friend-counter">
-              0
-            </span>
-          </p>
-        </Link>
-        <Link to="/" className="Navigation__link">
+        <NavLink
+          to="/friends"
+          className={({ isActive }) =>
+            isActive ? "Navigation__link_active" : "Navigation__link"
+          }
+        >
+          <p className="Navigation__page-link">👯‍♀️ Friends </p>
+        </NavLink>
+        <NavLink
+          to="/messages"
+          className={({ isActive }) =>
+            isActive ? "Navigation__link_active" : "Navigation__link"
+          }
+        >
           <p className="Navigation__page-link Navigation__buzz-link">
-            💬 Messages <span className="Navigation__link-counter">0</span>
+            💬 Messages
           </p>
-        </Link>
+        </NavLink>
       </div>
       <hr className="Navigation__line"></hr>
-      <p className="Navigation__page-link Navigation__profile-Modal-link ">
-        🐝 Profile
-      </p>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive ? "Navigation__link_active" : "Navigation__link"
+        }
+      >
+        <p className="Navigation__page-link Navigation__profile-Modal-link ">
+          🐝 Profile
+        </p>
+      </NavLink>
     </div>
   );
 }
