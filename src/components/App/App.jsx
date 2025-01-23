@@ -20,21 +20,6 @@ function App() {
   const [messageValues, setMessageValues] = useState([]);
   const [isEmojiPickerVisible, setIsEmojiPickerVisible] = useState(false);
 
-  //Opening and closing music search area
-  const handleSearchOpen = () => {
-    handleImgInputClose();
-    setIsMusicSelVisible(false);
-    setIsImgInputVisible(false);
-    setIsImgPreviewVisible(false);
-    setIsSearchVisible(true);
-    setIsEmojiPickerVisible(false);
-  };
-  const handleSearchClose = () => {
-    setIsSearchVisible(false);
-    setIsImgInputVisible(false);
-    setIsMusicSelVisible(false);
-  };
-
   //opening and closing music selection
   const handleMusicSelOpen = ({ songName, artistName, image }) => {
     setMusicSelData({ songName, artistName, image });
@@ -94,8 +79,6 @@ function App() {
           setIsSearchVisible,
           isMusicSelVisible,
           setIsMusicSelVisible,
-          handleSearchOpen,
-          handleSearchClose,
           handleMusicSelOpen,
           handleMusicSelClose,
           handleSongSearch,
@@ -114,6 +97,7 @@ function App() {
             messageValues,
             sendTextMessage,
             isEmojiPickerVisible,
+            setIsSearchVisible,
             setIsEmojiPickerVisible, //this needs to be in its own context
           }}
         >

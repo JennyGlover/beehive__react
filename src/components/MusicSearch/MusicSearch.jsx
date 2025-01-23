@@ -35,12 +35,6 @@ function MusicSearch() {
           <div className="MusicSearch__user-icon"></div>
           <p className="MusicSearch__heading">Search</p>
         </div>
-        <div
-          className="MusicSearch__close-btn"
-          onClick={() => {
-            handleSearchClose();
-          }}
-        ></div>
       </div>
       <span className="MusicSearch__search-container">
         <input

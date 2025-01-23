@@ -5,11 +5,12 @@
   position: relative;
   top: 20px;
   border: 1px solid rgba(128, 128, 128, 0.247);
-  border-radius: 5px 5px 0px 0px;
-  border-bottom: none;
+  border-radius: 6px;
   padding: 14px 10px 0;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .MusicSelection__display_none {

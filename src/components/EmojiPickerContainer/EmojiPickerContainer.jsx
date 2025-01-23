@@ -12,8 +12,11 @@ function EmojiPickerContainer() {
           ? "EmojiPickerContainer"
           : "EmojiPickerContainer__display-none"
       }
+      onClick={(e) => {
+        console.log(e.target.src);
+      }}
     >
-      <EmojiPicker />
+      <EmojiPicker height={440} width={350}/>
     </div>
   );
 }

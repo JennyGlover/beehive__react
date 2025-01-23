@@ -1,8 +1,40 @@
 {
-  "hash": "47d76a59",
+  "hash": "b96f4e3f",
   "configHash": "98e3b25c",
-  "lockfileHash": "e3b0c442",
-  "browserHash": "974226ef",
-  "optimized": {},
-  "chunks": {}
+  "lockfileHash": "dbc4029e",
+  "browserHash": "6cb03df9",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "112769d6",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "ebb8afa8",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "eab2e790",
+      "needsInterop": false
+    },
+    "emoji-picker-react": {
+      "src": "../../node_modules/emoji-picker-react/dist/emoji-picker-react.esm.js",
+      "file": "emoji-picker-react.js",
+      "fileHash": "82fb9baf",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-5UN2WQEG": {
+      "file": "chunk-5UN2WQEG.js"
+    },
+    "chunk-AK4TLUUY": {
+      "file": "chunk-AK4TLUUY.js"
+    }
+  }
 }

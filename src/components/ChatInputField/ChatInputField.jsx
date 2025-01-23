@@ -40,14 +40,33 @@ function ChatInputField() {
 
   //opening and closing the emoji picker
   const toggleEmojiPicker = () => {
-    console.log(isEmojiPickerVisible);
+    setIsSearchVisible(false)
+    setIsImgInputVisible(false);
     setIsEmojiPickerVisible((prev) => !prev);
   };
 
+  //opening and music search container
+  const toggleMusicSearch = () =>{
+    if(isEmojiPickerVisible){
+      setIsEmojiPickerVisible(false);
+    }
+    setIsSearchVisible((prev) => !prev);
+  };
+
+   //opening and music search container
+  const toggleImgInput = () =>{
+    if(isEmojiPickerVisible){
+      setIsEmojiPickerVisible(false);
+    }
+    setIsImgInputVisible((prev) => !prev);
+  }
+  
+  
   const {
     handleSearchOpen,
     isMusicSelVisible,
     isSearchVisible,
+    setIsSearchVisible,
     handleMusicSelClose,
   } = useContext(MusicSearchContext);
   const {
@@ -56,6 +75,7 @@ function ChatInputField() {
     handleImgInputClose,
     isImgPreviewVisible,
     setIsImgPreviewVisible,
+    setIsImgInputVisible,
     sendTextMessage,
     setIsEmojiPickerVisible,
     isEmojiPickerVisible,
@@ -96,8 +116,8 @@ function ChatInputField() {
           cols="50"
           value={values.chattext}
           className={
-            isMusicSelVisible || (isImgPreviewVisible && isValidImage)
-              ? "ChatInputField__textarea ChatInputField__textarea_style-music"
+             isSearchVisible || isImgInputVisible|| isImgPreviewVisible ||(isImgPreviewVisible && isValidImage)
+              ? "ChatInputField__textarea_display-none"
               : "ChatInputField__textarea"
           }
           onChange={(e) => handleChange(e)}
@@ -122,13 +142,6 @@ function ChatInputField() {
               handleUrlChange(e);
             }}
           />
-          <div
-            className="ChatInputField__close-btn"
-            onClick={() => {
-              setIsImgPreviewVisible(false);
-              handleImgInputClose();
-            }}
-          ></div>
         </div>
         <MusicSearch />
         <div className="ChatInputField__menu">
@@ -137,9 +150,7 @@ function ChatInputField() {
               type="button"
               className="ChatInputField__file-btn"
               onClick={() => {
-                setIsImgPreviewVisible(true);
-                setIsEmojiPickerVisible(false);
-                handleImgInputOpen();
+                toggleImgInput();
               }}
             >
               🖼️
@@ -148,7 +159,7 @@ function ChatInputField() {
               type="button"
               className="ChatInputField__file-btn"
               onClick={() => {
-                handleSearchOpen();
+                toggleMusicSearch();
               }}
             >
               🎵

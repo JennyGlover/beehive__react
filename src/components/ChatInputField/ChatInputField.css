@@ -26,12 +26,6 @@
   margin-top: 10px;
 }
 
-.ChatInputField__textarea_style-music {
-  height: 30px;
-  border-radius: 0px 0px 5px 5px;
-  margin-top: 0;
-  border-top: none;
-}
 
 .ChatInputField__textarea:focus {
   outline: none;
@@ -47,20 +41,14 @@
   height: auto;
   border: 1px solid rgba(128, 128, 128, 0.247);
   padding: 9px 10px 0;
-  border-radius: 6px 6px 0px 0px;
+  border-radius: 6px;
   resize: none;
   margin-top: 10px;
-  border-bottom: none;
   display: flex;
   align-items: center;
   position: relative;
-  bottom: -22px;
   background-color: white;
-}
-
-.ChatInputField__img-preview_display-none,
-.ChatInputField__img-close-btn_display-none {
-  display: none;
+  bottom: -10px
 }
 
 .ChatInputField__img-container {
@@ -144,30 +132,14 @@
   border: 1px solid rgba(128, 128, 128, 0.247);
   padding: 2px 10px;
   border-radius: 6px;
+  margin-top: 10px;
 }
 
-.ChatInputField__url-container_display-none {
+.ChatInputField__url-container_display-none,
+.ChatInputField__textarea_display-none,
+.ChatInputField__img-preview_display-none,
+.ChatInputField__img-close-btn_display-none {
   display: none;
-}
-
-.ChatInputField__close-btn {
-  text-align: right;
-  font-weight: 400;
-  font-size: 18px;
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.658);
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url("/src/assets/circle-xmark-solid.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 20px;
-  margin-top: 5px;
-  position: absolute;
-  right: 3%;
-  top: 5px;
 }
 
 .ChatInputField__img-close-btn {
