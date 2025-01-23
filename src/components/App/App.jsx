@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import Navigation from "../Navigation/Navigation"
 import {
   MusicSearchContext,
   ImageInputContext,
 } from "../../contexts/AppContexts";
 import Main from "../Main/Main";
+import Friends from "../Friends/Friends";
 import Signup from "../Signup/Signup";
 import Login from "../Login/Login";
 import "./App.css";
@@ -27,18 +29,6 @@ function App() {
   };
   const handleMusicSelClose = () => {
     setIsMusicSelVisible(false);
-  };
-
-  //opening and closing image url input
-  const handleImgInputOpen = () => {
-    setIsSearchVisible(false);
-    setIsEmojiPickerVisible(false);
-    setIsImgInputVisible(true);
-  };
-  //opening and closing image url input
-  const handleImgInputClose = () => {
-    setIsEmojiPickerVisible(false);
-    setIsImgInputVisible(false);
   };
 
   //closing emojie modal with escape
@@ -90,8 +80,6 @@ function App() {
           value={{
             isImgInputVisible,
             setIsImgInputVisible,
-            handleImgInputOpen,
-            handleImgInputClose,
             isImgPreviewVisible,
             setIsImgPreviewVisible,
             messageValues,
@@ -101,8 +89,11 @@ function App() {
             setIsEmojiPickerVisible, //this needs to be in its own context
           }}
         >
+          <Navigation />
+
           <Routes>
             <Route path="/" element={<Main />} />
+            <Route path="/friends" element={<Friends />}/>
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
           </Routes>

@@ -50,11 +50,17 @@ function ChatInputField() {
     if(isEmojiPickerVisible){
       setIsEmojiPickerVisible(false);
     }
+     if(isImgInputVisible){
+      setIsImgInputVisible(false);
+    }
     setIsSearchVisible((prev) => !prev);
   };
 
    //opening and music search container
   const toggleImgInput = () =>{
+     if(isSearchVisible){
+      setIsSearchVisible(false);
+    }
     if(isEmojiPickerVisible){
       setIsEmojiPickerVisible(false);
     }
@@ -63,16 +69,12 @@ function ChatInputField() {
   
   
   const {
-    handleSearchOpen,
     isMusicSelVisible,
     isSearchVisible,
     setIsSearchVisible,
-    handleMusicSelClose,
   } = useContext(MusicSearchContext);
   const {
     isImgInputVisible,
-    handleImgInputOpen,
-    handleImgInputClose,
     isImgPreviewVisible,
     setIsImgPreviewVisible,
     setIsImgInputVisible,
@@ -169,7 +171,6 @@ function ChatInputField() {
               type="button"
               className="ChatInputField__file-btn"
               onClick={() => {
-                console.log("clicked");
                 toggleEmojiPicker();
               }}
             >
