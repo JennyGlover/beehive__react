@@ -25,8 +25,7 @@
   width: 60px;
   height: 100%;
   cursor:
-    url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32"%3E%3Ctext x="-5" y="28" font-size="32" %3E🍯%3C/text%3E%3C/svg%3E')
-      16 28,
+    url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32"%3E%3Ctext x="-5" y="28" font-size="32" %3E🍯%3C/text%3E%3C/svg%3E') 16 28,
     auto;
 }
 
@@ -116,10 +115,6 @@
   padding-left: 30px;
 }
 
-.Navigation__buzz-link,
-.Navigation__buzz-link:hover {
-  margin-bottom: 55px;
-}
 
 .Navigation__profile-Modal-link,
 .Navigation__profile-Modal-link:hover {

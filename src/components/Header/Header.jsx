@@ -1,7 +1,12 @@
+import { useContext } from "react";
+import { HeaderContext } from "../../contexts/AppContexts";
 import logo from "../../assets/beehive-logo.png";
+import ProfileModal from "../ProfileModal/ProfileModal";
 import "./Header.css";
 
 function Header() {
+
+  const { isProfileVisible, setIsProfileVisible, handleOpenProfileModal } = useContext(HeaderContext);
   return (
     <div className="Header">
       <div className="Header__container">
@@ -14,12 +19,18 @@ function Header() {
             🔔<span className="Header__notification-dot"></span>
           </p>
           <div className="Header__profile-container">
-            <div className="Header__profile-icon"></div>
+            <div 
+            className="Header__profile-icon"
+            onClick={() => {
+              handleOpenProfileModal()
+            }}
+            ></div>
             <p className="Header__profile-name">Glena Hanz </p>
           </div>
         </div>
       </div>
       <p className="Header__friends-"></p>
+      <ProfileModal />
     </div>
   );
 }

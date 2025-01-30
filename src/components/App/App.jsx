@@ -5,11 +5,11 @@ import {
   MusicSearchContext,
   ImageInputContext,
   AuthenticationContext,
+  HeaderContext
 } from "../../contexts/AppContexts";
 import Main from "../Main/Main";
 import ProtectedRoute from "../ProtectedRoute";
 import Friends from "../Friends/Friends";
-import Profile from "../Profile/Profile";
 import Signup from "../Signup/Signup";
 import Login from "../Login/Login";
 import "./App.css";
@@ -25,6 +25,7 @@ function App() {
   const [messageValues, setMessageValues] = useState([]);
   const [isEmojiPickerVisible, setIsEmojiPickerVisible] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(true);
+  const [isProfileVisible, setIsProfileVisible] = useState(false);
   //opening and closing music selection
   const handleMusicSelOpen = ({ songName, artistName, image }) => {
     setMusicSelData({ songName, artistName, image });
@@ -55,6 +56,10 @@ function App() {
     getSpotifyData();
   };
 
+  //opening profile modal
+  const handleOpenProfileModal = () => {
+    setIsProfileVisible(true);
+  }
   //sending text message
   const sendTextMessage = (values) => {
     console.log(values);
@@ -98,12 +103,19 @@ function App() {
               setIsEmojiPickerVisible, //this needs to be in its own context
             }}
           >
+          <HeaderContext.Provider
+            value={{
+              isProfileVisible,
+              setIsProfileVisible,
+              handleOpenProfileModal,
+            }}
+          >
             <Navigation />
             {/* if anonymous take context and set nav to display none */}
 
             <Routes>
               <Route
-                path="/messages"
+                path="/"
                 element={
                   <ProtectedRoute>
                     <Main />
@@ -115,14 +127,6 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <Friends />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/"
-                element={
-                  <ProtectedRoute>
-                    <Profile />
                   </ProtectedRoute>
                 }
               />
@@ -143,6 +147,7 @@ function App() {
                 }
               />
             </Routes>
+            </HeaderContext.Provider>
           </ImageInputContext.Provider>
         </MusicSearchContext.Provider>
       </AuthenticationContext.Provider>

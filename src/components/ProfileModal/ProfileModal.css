@@ -1,0 +1,9 @@
+.ProfileModal {
+    position: absolute;
+    background-color: white;
+    border: 1px solid orange;
+    z-index: 7;
+    padding: 20px;
+    margin: 0 auto;
+
+}
