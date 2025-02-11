@@ -12,6 +12,7 @@ import ProtectedRoute from "../ProtectedRoute";
 import Friends from "../Friends/Friends";
 import Signup from "../Signup/Signup";
 import Login from "../Login/Login";
+import ProfileModal from "../ProfileModal/ProfileModal";
 import "./App.css";
 import fetchSpotifyData from "../../utils/spotifyApi";
 
@@ -35,12 +36,18 @@ function App() {
     setIsMusicSelVisible(false);
   };
 
-  //closing emojie modal with escape
-  const handleCloseEmojiModal = (e) => {
-    if (e.key === "Escape") {
-      setIsEmojiPickerVisible(false);
+
+//closing modals with escape
+  const handleEscapeCloseModal = (e) => {
+ if (e.key === "Escape") {
+      setIsProfileVisible(false);
     }
-  };
+  }
+//closing modals
+  const handleCloseModal = (e) => {
+      
+    setIsProfileVisible(false);
+  }
 
   //fetch search results from spotify
   const handleSongSearch = (song) => {
@@ -77,6 +84,7 @@ function App() {
           setIsNavVisible,
         }}
       >
+
         <MusicSearchContext.Provider
           value={{
             isSearchVisible,
@@ -110,6 +118,11 @@ function App() {
               handleOpenProfileModal,
             }}
           >
+            <ProfileModal 
+            handleCloseModal={handleCloseModal}
+            isProfileVisible={isProfileVisible}
+            handleEscapeCloseModal = {handleEscapeCloseModal}
+            />
             <Navigation />
             {/* if anonymous take context and set nav to display none */}
 

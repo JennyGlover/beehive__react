@@ -1,6 +1,8 @@
 import "./ChatHeader.css";
-
+import { HeaderContext } from "../../contexts/AppContexts";
+import { useContext } from "react";
 function ChatHeader() {
+  const {setIsProfileVisible} = useContext(HeaderContext)
   return (
     <div className="ChatHeader">
       <div className="ChatHeader__receiver">
@@ -15,7 +17,12 @@ function ChatHeader() {
       </div>
       <div className="ChatHeader__menu">
         {/* <div className="ChatHeader__video-icon"></div> */}
-        <button className="ChatHeader__profile-btn">View Profile</button>
+        <button 
+        className="ChatHeader__profile-btn"
+        onClick={() => {
+          setIsProfileVisible(true);
+        }}
+        >View Profile</button>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import "./Header.css";
 
 function Header() {
 
-  const { isProfileVisible, setIsProfileVisible, handleOpenProfileModal } = useContext(HeaderContext);
+  const { isProfileVisible , setIsProfileVisible, handleOpenProfileModal } = useContext(HeaderContext);
   return (
     <div className="Header">
       <div className="Header__container">
@@ -30,7 +30,6 @@ function Header() {
         </div>
       </div>
       <p className="Header__friends-"></p>
-      <ProfileModal />
     </div>
   );
 }

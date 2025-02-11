@@ -9,10 +9,14 @@ function Navigation() {
 
   return (
     <div className={isNavVisible ? "Navigation" : "Navigation_display-none"}>
+          
+        <NavLink
+          to="/" className='Navigation__home-link'>
       <div className="Navigation__logo-container">
         <img className="Navigation__logo" src={logo} alt="BeeHive logo" />
         <p className="Navigation__logo-text">BeeHive</p>
       </div>
+      </NavLink>
       <hr className="Navigation__line"></hr>
       <p className="Navigation__menu-text">Menu </p>
       <div className="Navigation__page-Links">

@@ -1,12 +1,32 @@
+import { useRef, useEffect } from 'react';
 import ModalWithForm from '../ModalWithForm/ModalWithForm';
 import './ProfileModal.css';
 
 
-function ProfileModal () {
+function ProfileModal ({handleCloseModal, isProfileVisible, handleEscapeCloseModal}) {
+  const modalRef = useRef(null);
+  
+  useEffect(() => {
+   if(isProfileVisible && modalRef.current) {
 
+    //programmatically focussing the modal when it becomes visible
+    modalRef.current.focus();
+   }
+  }, [isProfileVisible]);
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") {
+      handleCloseModal(); //Close modal when Escape is Pressed
+    }
+  }
     return (
-        <div className="ProfileModal">
-           
+        <div 
+        ref={modalRef}
+        className={isProfileVisible? 'ProfileModal' : 'ProdileModal ProfileModal__hidden'}
+        tabIndex={-1} //Makes the div focusable programmatically
+        onKeyDown={handleKeyDown} //handles keypresses when focused
+        >
+           <div className="profileModal__container">
              <ModalWithForm title="Profile" buttonText="Save">
           <label htmlFor="ProfileModal-name" className="ProfileModal__name">
             Name{" "}
@@ -42,7 +62,12 @@ function ProfileModal () {
             required
           />
         </ModalWithForm>
-
+        <div 
+        className="ProfileModal__close-btn"
+        onClick={() => {
+          handleCloseModal();
+        }}></div>
+</div>
         </div>
     );
 }
