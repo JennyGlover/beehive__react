@@ -25,8 +25,11 @@ function ProfileModal ({handleCloseModal, isProfileVisible, handleEscapeCloseMod
         className={isProfileVisible? 'ProfileModal' : 'ProdileModal ProfileModal__hidden'}
         tabIndex={-1} //Makes the div focusable programmatically
         onKeyDown={handleKeyDown} //handles keypresses when focused
+        onClick={handleCloseModal}
         >
-           <div className="profileModal__container">
+           <div className="profileModal__container"
+           onClick={(e) => e.stopPropagation()} //Prevents event propagation to parent
+           >
              <ModalWithForm title="Profile" buttonText="Save">
           <label htmlFor="ProfileModal-name" className="ProfileModal__name">
             Name{" "}
