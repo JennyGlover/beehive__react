@@ -43,6 +43,7 @@ function App() {
       setIsProfileVisible(false);
     }
   }
+
 //closing modals
   const handleCloseModal = (e) => {
       
@@ -70,7 +71,7 @@ function App() {
   //sending text message
   const sendTextMessage = (values) => {
     console.log(values);
-    setMessageValues(() => [values]);
+    setMessageValues((prevMessageValues) => [...prevMessageValues, values]);
   };
   useEffect(() => {
     console.log(messageValues);

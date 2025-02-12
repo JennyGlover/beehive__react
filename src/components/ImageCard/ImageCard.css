@@ -1,12 +1,13 @@
 .ImageCard {
-  background-image: url("/src/assets/Espresso_-_Sabrina_Carpenter.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   width: 180px;
-  height: 180px;
-  border-radius: 10px;
+  height: fit-content;
   cursor: pointer;
+}
+
+.ImageCard__image {
+  width: 100%;
+  height: fit-content;
+  border-radius: 10px;
 }
 
 .ImageCard__position-left {

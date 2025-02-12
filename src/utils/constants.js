@@ -1,3 +1,3 @@
-const SpotifyAccessToken = "BQCYXjhlSy2nL7kPLgae_ZQHh_lLehbtPRIg39gK4JwD8Zeyajc3TWcKp5S6q7ATw7myTV9YzmdOqYDJooVmVfRe7N2_x7Lakku9X3pM5vpm5fsdxl0";
+const SpotifyAccessToken = "BQCCvQR_7JjAjrzBuZ6as12aomLw_xTO6v7PKsRDZG2ld5Jqb8w1L5nZtkUYvUSkWr1uD51RU4t7Nxgdmltti_9vwW5Wq-t-ovWxOkrQRovY620alCz6lWmNb-ALcF8N0oEcLR2rVmY";
 
 export default { SpotifyAccessToken };

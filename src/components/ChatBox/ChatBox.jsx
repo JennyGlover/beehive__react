@@ -10,16 +10,26 @@ import "./ChatBox.css";
 
 function ChatBox() {
   const { messageValues } = useContext(ImageInputContext);
+
   return (
     <div className="ChatBox">
       <div className="ChatBox__container">
-        {/* {messageValues.map(() =>{
-          if(messageValues.chattext) {
-            <ChatCard position="right" />
-          }
-        })}
-        {/* <ImageCard position="right" />
-        <TimeSent position="right" /> */}
+       {messageValues.map((message, index) => (
+        <div key={index}>
+          {message.chattext && (
+            <ChatCard position="right" text={message.chattext} />
+          )}
+          {message.image && (
+            <ImageCard position="right" image={message.image} />
+          )}
+            {message.song && (
+              <MusicCard position="right" song={message.song}
+              />
+            )}
+          <TimeSent position="right" />
+        </div>
+        ))}
+        
       </div>
     </div>
   );
