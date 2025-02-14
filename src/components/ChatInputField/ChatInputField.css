@@ -163,3 +163,15 @@
   border: 1px solid rgb(224, 224, 224);
   opacity: 0.8;
 }
+
+.ChatInputField__emojiPickerContainer {
+  display: block;
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+  z-index: 5;
+}
+
+/* .ChatInputField__emojiPickerContainer_display-none {
+  display: none;
+} */

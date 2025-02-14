@@ -24,7 +24,6 @@ function App() {
   const [songData, setSongData] = useState();
   const [musicSelData, setMusicSelData] = useState();
   const [messageValues, setMessageValues] = useState([]);
-  const [isEmojiPickerVisible, setIsEmojiPickerVisible] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [isProfileVisible, setIsProfileVisible] = useState(false);
   //opening and closing music selection
@@ -107,9 +106,7 @@ function App() {
               setIsImgPreviewVisible,
               messageValues,
               sendTextMessage,
-              isEmojiPickerVisible,
               setIsSearchVisible,
-              setIsEmojiPickerVisible, //this needs to be in its own context
             }}
           >
           <HeaderContext.Provider

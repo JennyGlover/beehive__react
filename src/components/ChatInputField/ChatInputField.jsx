@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import MusicSearch from "../MusicSearch/MusicSearch";
 import MusicSelection from "../MusicSelection/MusicSelection";
+import EmojiPicker from "emoji-picker-react";
 import {
   MusicSearchContext,
   ImageInputContext,
@@ -18,6 +19,19 @@ function ChatInputField() {
     song: "",
   });
 
+  const [isEmojiPickerVisible, setIsEmojiPickerVisible] = useState(false);
+    
+  const {
+    isImgInputVisible,
+    isImgPreviewVisible,
+    setIsImgPreviewVisible,
+    setIsImgInputVisible,
+    sendTextMessage,
+  } = useContext(ImageInputContext);
+
+   const { isMusicSelVisible, isSearchVisible, setIsSearchVisible } =
+    useContext(MusicSearchContext);
+
   //funct for displaying preview img
   const handleUrlChange = (e) => {
     const url = e.target.value;
@@ -31,11 +45,20 @@ function ChatInputField() {
       setIsValidImage(false);
     }
   };
+    
+  //Adding emoji to the chat text area
+ const handleEmojiSelect = (emojiObject) => {
+  handleChange({
+    target: { name: "chattext", value: values.chattext + emojiObject.emoji },
+  });
+  toggleEmojiPicker();
+};
 
   //handling sending text or media
   const handleSubmitText = () => {
     ///take all the values
-    sendTextMessage(values);
+    sendTextMessage(values); //sending all values
+    resetForm(); //Resetting form after sending
   };
 
   //opening and closing the emoji picker
@@ -70,18 +93,6 @@ function ChatInputField() {
     }
     setIsImgInputVisible((prev) => !prev);
   };
-
-  const { isMusicSelVisible, isSearchVisible, setIsSearchVisible } =
-    useContext(MusicSearchContext);
-  const {
-    isImgInputVisible,
-    isImgPreviewVisible,
-    setIsImgPreviewVisible,
-    setIsImgInputVisible,
-    sendTextMessage,
-    setIsEmojiPickerVisible,
-    isEmojiPickerVisible,
-  } = useContext(ImageInputContext);
 
   return (
     <div className="ChatInputField">
@@ -128,6 +139,12 @@ function ChatInputField() {
           onChange={(e) => handleChange(e)}
           placeholder="Write a message..."
         />
+          {isEmojiPickerVisible && (
+          <div className="ChatInputField__emojiPickerContainer">
+            <EmojiPicker onEmojiClick={handleEmojiSelect} />
+          </div>
+        )}
+
         <div
           className={
             isImgInputVisible && !isSearchVisible
@@ -173,9 +190,7 @@ function ChatInputField() {
             <button
               type="button"
               className="ChatInputField__file-btn"
-              onClick={() => {
-                toggleEmojiPicker();
-              }}
+              onClick={toggleEmojiPicker}
             >
               😄
             </button>
